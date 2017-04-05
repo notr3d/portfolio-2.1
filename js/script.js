@@ -23,7 +23,7 @@ modalCloseButton.addEventListener('click', function(){
 
 var openModal = function(){
 	modal.classList.add('active');
-	$(modal).children().load('/html/test.html')
+	$(modal).children().load('html/test.html')
 }
 
 var closeModal = function(){
