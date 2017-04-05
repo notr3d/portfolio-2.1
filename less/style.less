@@ -3,6 +3,10 @@
 @import 'site-aside.less';
 @import 'modal.less';
 
+@m: ~ "(max-width: 767px)";
+@t: ~ "(min-width: 768px)";
+@d: ~ "(min-width: 1280px)";
+
 * {
 	box-sizing: border-box;
 }
@@ -10,9 +14,11 @@
 body {
 	margin: 0;
 }
-button {
+
+/*button {
 	cursor: pointer;
-}
+}*/
+
 .con {
 	max-width: 1000px;
 	margin: 0 auto;
@@ -41,5 +47,7 @@ button {
 	height: 45px;
 }
 
-
+.js-toggle.active {
+	background: #000;
+}
 
