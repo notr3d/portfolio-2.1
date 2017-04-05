@@ -1,7 +1,11 @@
-var siteAside = document.querySelector('.site-aside');
+var toggleButton = document.querySelector('.js-button');
+toggleButton.addEventListener('click', function(){
+	this.classList.toggle('active');
+});
+
+var body = document.querySelector('body');
 var siteAsideToggleButton = document.querySelector('.site-aside__toggle-button');
 
-
 siteAsideToggleButton.addEventListener('click', function(){
-	siteAside.classList.toggle('active')
-})
+	body.classList.toggle('aside-on');
+});

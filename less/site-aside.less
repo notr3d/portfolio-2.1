@@ -1,0 +1,28 @@
+.site-aside {
+	width: 250px;
+	height: 100%;
+	background: #fff;
+	border-right: 1px solid #000;
+	position: fixed;
+	top: 0;
+	right: 100%;
+	padding: 15px;
+	&__toggle-button {
+		position: absolute;
+		top: 0;
+		left: 100%;
+		cursor: pointer;
+	}
+		&__toggle-button.active {
+		background: #000;
+	}
+}
+
+
+.aside-on .site-aside {
+	right: auto;
+	left: 0;
+}
+.aside-on .site-content, .aside-on .site-header, .aside-on .site-footer {
+	margin-left: 250px;
+}
