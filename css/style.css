@@ -1,0 +1,52 @@
+body {
+	margin: 0;
+}
+
+.site-wrapper {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.site-header {
+	border-bottom: 1px solid #000;
+	padding: 15px;
+}
+
+.site-main {
+	display: flex;
+	flex-grow: 1;
+}
+
+.site-aside {
+	background: #fff;
+	width: 250px;
+	border-right: 1px solid #000;
+	position: relative;
+	padding: 15px;
+	transition: .3s;
+}
+.site-aside.active {
+	width: 0;
+	padding: 0;
+}
+.site-aside__toggle-button {
+	position: absolute;
+	top: 0;
+	left: 100%;
+	cursor: pointer;
+}
+
+.site-content {
+	background: #eee;
+	flex-grow: 1;
+	padding: 30px;
+}
+
+.site-footer {
+	background: #000;
+	border-top: 1px solid #000;
+	color: #fff;
+	padding: 15px;
+}
+
