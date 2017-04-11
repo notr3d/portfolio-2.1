@@ -3,9 +3,9 @@
 @import 'site-aside.less';
 @import 'modal.less';
 
-@m: ~ "(max-width: 767px)";
-@t: ~ "(min-width: 768px)";
-@d: ~ "(min-width: 1280px)";
+@m: ~ "(screen-width: 767px)";
+@t: ~ "(screen-width: 768px)";
+@d: ~ "(screen-width: 1280px)";
 
 * {
 	box-sizing: border-box;
@@ -13,16 +13,14 @@
 
 body {
 	margin: 0;
+	font-family: 'Open Sans', sans-serif;
 }
 
 button {
 	cursor: pointer;
 }
 
-.con {
-	max-width: 1000px;
-	margin: 0 auto;
-}
+
 
 .site {
 	min-height: 100vh;
@@ -58,3 +56,49 @@ button {
 	color: #fff;
 }
 
+.tooltip {
+	position: fixed;
+	background: #000;
+	color: #fff;
+	visibility: hidden;
+	opacity: 0;
+	padding: 5px 10px;
+	font-size: 10px;
+	max-width: 200px;
+	transition: opacity .1s;
+}
+.tooltip.active {
+	visibility: visible;
+	opacity: 1;
+	z-index: 100;
+}
+
+
+.con {
+	max-width: 1000px;
+	margin: 0 auto;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	@media @t {
+		flex-direction: row;
+	}
+}
+
+.col-m-1, .col-t-2, .col-d-3 {
+	border: 1px solid red;
+}
+
+.col-t-2 {
+	@media @t {
+		flex-basis: 50%;
+	}
+}
+.col-d-3 {
+	@media @d {
+		flex-basis: 33%;
+	}
+}
