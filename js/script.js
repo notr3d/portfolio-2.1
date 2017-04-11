@@ -1,16 +1,4 @@
-/*var toggleButton = document.querySelector('.js-button');
-toggleButton.addEventListener('click', function(){
-	this.classList.toggle('active');
-});
-
-
-var body = document.querySelector('body');
-var siteAsideToggleButton = document.querySelector('.site-aside__toggle-button');
-
-siteAsideToggleButton.addEventListener('click', function(){
-	body.classList.toggle('aside-on');
-});
-
+/*
 var modal = document.querySelector('.modal');
 var modalButton = document.querySelectorAll('.modal-open');
 for (var i = 0; i < modalButton.length; i++){
@@ -46,7 +34,10 @@ function loadDoc(target) {
   };
   xhttp.open("GET", target, true);
   xhttp.send();
-}*/
+}
+*/
+
+var body = document.body;
 
 var toggleButtons = document.querySelectorAll('.js-toggle');
 for (var i = 0; i < toggleButtons.length; i++){
@@ -55,7 +46,10 @@ for (var i = 0; i < toggleButtons.length; i++){
 	});
 };
 
-var siteAsideToggleButton = document.querySelector('.site-aside__toggle-button');
-siteAsideToggleButton.addEventListener('click', function(){
-	document.body.classList.toggle('aside-on');
-});
+var siteAsideToggleButtons = document.querySelectorAll('.js-aside-toggle-button');
+for (var i = 0; i < siteAsideToggleButtons.length; i++){
+	siteAsideToggleButtons[i].addEventListener('click', function(){
+		body.classList.toggle('aside-on');
+	});
+}
+

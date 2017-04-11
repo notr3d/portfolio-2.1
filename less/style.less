@@ -15,17 +15,23 @@ body {
 	margin: 0;
 }
 
-/*button {
+button {
 	cursor: pointer;
-}*/
+}
 
 .con {
 	max-width: 1000px;
 	margin: 0 auto;
 }
 
-.site-wrapper {
+.site {
 	min-height: 100vh;
+	display: flex;
+}
+
+.site-wrapper {
+	flex-grow: 1;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 }
@@ -49,5 +55,6 @@ body {
 
 .js-toggle.active {
 	background: #000;
+	color: #fff;
 }
 

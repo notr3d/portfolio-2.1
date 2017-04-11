@@ -1,72 +1,62 @@
-/*.site-aside {
-	width: 80%;
-	height: 100%;
-	background: #fff;
-	border-right: 1px solid #000;
-	position: fixed;
-	top: 0;
-	right: 100%;
-	padding: 15px;
-	transition: .3s;
-	&__toggle-button {
-		position: absolute;
-		top: 0;
-		left: 100%;
-		cursor: pointer;
-	}
-		&__toggle-button.active {
-		background: #000;
-	}
-	@media @t {
-		width: 250px;
-	}
-	@media @d {
-		width: 350px;
-	}
-}
-
-
-.aside-on .site-aside {
-	transform: translateX(100%)
-}
-.aside-on .site-wrapper {
-	@media @t {
-		padding-left: 250px;
-	}
-}*/
-
 .site-aside {
-	position: fixed;
+	position: absolute;
+	left: 0;
 	top: 0;
-	right: 100%;
-	width: 100%;
 	height: 100%;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
+	width: 0;
+	background: rgba(0, 0, 0, 0.22);	
+	z-index: 10;
 	&__wrapper {
 		background: #fff;
-		min-width: 300px;
-		max-width: 600px;
+		width: 0;
+		visibility: hidden;
+		height: 100%;
+		border-right: 1px solid #000;
+		box-shadow: 5px 0 15px 0 rgba(0, 0, 0, 0.3);
 		padding: 15px;
-		flex-grow: 1;
-	}
-	&__bg {		
-		background: rgba(0, 0, 0, 0.25);
-		flex-grow: 1;
-		min-width: 80px;
 	}
 	&__toggle-button {
 		position: absolute;
-		right: 100%;
-		top: 15px;
+		left: 0;
+		top: 0;
 		width: 50px;
 		height: 50px;
 	}
+	@media @m {
+		&__wrapper {
+			opacity: 0;
+			transition: opacity .3s;
+		}
+	}
+	@media @t {
+		position: relative;
+		transition: width .3s;
+		&__wrapper {
+			width: 100%;
+		}
+		&__toggle-button {
+			left: 100%;
+		}
+	}
 }
 
 .aside-on .site-aside {
-	transform: translateX(100%);
+	width: 100%;
+	&__wrapper {
+		visibility: visible;
+	}
+	@media @m {
+		&__wrapper {
+			opacity: 1;
+			width: 300px;
+		}
+		&__toggle-button {
+			left: auto;
+			right: 15px;
+			top: 15px;
+		}
+	}
+	@media @t {
+		width: 300px;
+	}
 }
