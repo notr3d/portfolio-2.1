@@ -1,28 +1,62 @@
 .site-aside {
-	width: 250px;
-	height: 100%;
-	background: #fff;
-	border-right: 1px solid #000;
-	position: fixed;
+	position: absolute;
+	left: 0;
 	top: 0;
-	right: 100%;
-	padding: 15px;
+	height: 100%;
+	width: 0;
+	background: rgba(0, 0, 0, 0.22);	
+	z-index: 10;
+	&__wrapper {
+		background: #fff;
+		width: 0;
+		visibility: hidden;
+		height: 100%;
+		border-right: 1px solid #000;
+		box-shadow: 5px 0 15px 0 rgba(0, 0, 0, 0.3);
+		padding: 15px;
+	}
 	&__toggle-button {
 		position: absolute;
+		left: 0;
 		top: 0;
-		left: 100%;
-		cursor: pointer;
+		width: 50px;
+		height: 50px;
 	}
-		&__toggle-button.active {
-		background: #000;
+	@media @m {
+		&__wrapper {
+			opacity: 0;
+			transition: opacity .3s;
+		}
+	}
+	@media @t {
+		position: relative;
+		transition: width .3s;
+		&__wrapper {
+			width: 100%;
+		}
+		&__toggle-button {
+			left: 100%;
+		}
 	}
 }
-
 
 .aside-on .site-aside {
-	right: auto;
-	left: 0;
-}
-.aside-on .site-content, .aside-on .site-header, .aside-on .site-footer {
-	margin-left: 250px;
+	width: 100%;
+	&__wrapper {
+		visibility: visible;
+	}
+	@media @m {
+		&__wrapper {
+			opacity: 1;
+			width: 300px;
+		}
+		&__toggle-button {
+			left: auto;
+			right: 15px;
+			top: 15px;
+		}
+	}
+	@media @t {
+		width: 300px;
+	}
 }
