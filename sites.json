@@ -1,27 +1,27 @@
 [
   {
-		"name": "site-1",
+		"name": "Site-1",
 		"text": "text-1",
 		"big": true
 	},
 	{
-		"name": "site-2",
+		"name": "Site-2",
 		"text": "text-2"
 	},
 	{
-		"name": "site-3",
+		"name": "Site-3",
 		"text": "text-3"
 	},
 	{
-		"name": "site-4",
+		"name": "Site-4",
 		"text": "text-4"
 	},
 	{
-		"name": "site-5",
+		"name": "Site-5",
 		"text": "text-5"
 	},
 	{
-		"name": "site-6",
+		"name": "Site-6",
 		"text": "text-6",
 		"big": true
 	}	

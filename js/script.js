@@ -18,16 +18,49 @@ for (var i = 0; i < siteAsideToggleButtons.length; i++){
 	});
 };
 
+//sites json init
+
+var xhr = new XMLHttpRequest();
+xhr.open('GET', 'sites.json', false);
+xhr.send();
+var sitesJSON = JSON.parse(xhr.responseText);
+
+var sitesContainer = document.querySelector('#sites');
+
+sitesJSON.forEach(function(site, i){
+	site.id = 'site-' + i;
+	var sitesItem = document.createElement('div');
+	sitesItem.classList.add('sites__item')
+	sitesItem.insertAdjacentHTML('afterbegin', 
+		'<div data-modal="' + site.id + '" data-tooltip="' + site.name + '" class="sites__inner">' +
+			'<div class="sites__title">' + site.name + '</div>' +
+		'</div>'
+		);
+	;
+	if(site.hasOwnProperty('big') && site.big) {
+		sitesItem.classList.add('sites__item--big')
+	}
+	sitesContainer.appendChild(sitesItem);
+});
+
+
 //site modal
 
-/*var xhttp = new XMLHttpRequest();
-var folder = 'html/';
-var target = '';
-var path = '';
-var openModal = function(modalId, prev, next){
+var openModal = function(modalId){
 	modal.classList.add('active');
 	
-  target = modalId + '.html'; 
+	var modalTitle = modal.querySelector('#modal-title');
+	var modalText = modal.querySelector('#modal-text');
+	
+	sitesJSON.forEach(function(site){
+		if (site.id == modalId){
+			modalTitle.innerHTML = site.name
+			modalText.innerHTML = site.text
+			
+		}
+	})
+	
+ /* target = modalId + '.html'; 
 	path = folder + target;
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200){
@@ -43,7 +76,7 @@ var openModal = function(modalId, prev, next){
 	};
 	if (next){
 		document.querySelector('.modal__button--next').dataset['tooltip'] = next.dataset['modal'];
-	}
+	}*/
 };
 
 var closeModal = function(){
@@ -64,7 +97,7 @@ modalBody.addEventListener('click', function(e){
 var modalOpenButtons = document.querySelectorAll('[data-modal]');
 for (var i = 0; i < modalOpenButtons.length; i++){
 	modalOpenButtons[i].addEventListener('click', function(){
-		openModal(this.dataset['modal'], this.previousElementSibling, this.nextElementSibling);
+		openModal(this.dataset['modal']);
 	})
 };
 
@@ -87,45 +120,12 @@ for (var i = 0; i < modalNavButtons.length; i++){
 };
 
 modal.querySelector('.modal__button--prev').addEventListener('click', function(){
-	openModal(this.dataset['tooltip']);
+	openModal(this.dataset['modal']);
 });
 
 modal.querySelector('.modal__button--next').addEventListener('click', function(){
-	openModal(this.dataset['tooltip']);
-});*/
-
-
-
-
-
-
-
-//sites json init
-
-var xhr = new XMLHttpRequest();
-xhr.open('GET', 'sites.json', false);
-xhr.send();
-var sitesJSON = JSON.parse(xhr.responseText);
-
-var sitesContainer = document.querySelector('#sites');
-
-sitesJSON.forEach(function(site){
-	var sitesItem = document.createElement('div');
-	sitesItem.classList.add('sites__item')
-	sitesItem.insertAdjacentHTML('afterbegin', 
-		'<div data-modal="test-1" data-tooltip="' + site.name + '" class="sites__inner">' +
-			'<div class="sites__title">' + site.name + '</div>' +
-		'</div>'
-		);
-	;
-	if(site.hasOwnProperty('big') && site.big) {
-		sitesItem.classList.add('sites__item--big')
-	}
-	sitesContainer.appendChild(sitesItem);
+	openModal(this.dataset['modal']);
 });
-
-
-
 
 
 //tooltips
