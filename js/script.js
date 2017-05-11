@@ -1,5 +1,7 @@
 var body = document.body;
 
+//toggle buttons
+
 var toggleButtons = document.querySelectorAll('.js-toggle');
 for (var i = 0; i < toggleButtons.length; i++){
 	toggleButtons[i].addEventListener('click', function(){
@@ -18,7 +20,7 @@ for (var i = 0; i < siteAsideToggleButtons.length; i++){
 
 //site modal
 
-var xhttp = new XMLHttpRequest();
+/*var xhttp = new XMLHttpRequest();
 var folder = 'html/';
 var target = '';
 var path = '';
@@ -29,8 +31,8 @@ var openModal = function(modalId, prev, next){
 	path = folder + target;
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200){
-      modalWrapper.innerHTML =
-      this.responseText;
+//      modalWrapper.innerHTML = this.responseText;
+			console.log(this.responseText)
     }
   };
   xhttp.open("GET", path, true);
@@ -90,6 +92,36 @@ modal.querySelector('.modal__button--prev').addEventListener('click', function()
 
 modal.querySelector('.modal__button--next').addEventListener('click', function(){
 	openModal(this.dataset['tooltip']);
+});*/
+
+
+
+
+
+
+
+//sites json init
+
+var xhr = new XMLHttpRequest();
+xhr.open('GET', 'sites.json', false);
+xhr.send();
+var sitesJSON = JSON.parse(xhr.responseText);
+
+var sitesContainer = document.querySelector('#sites');
+
+sitesJSON.forEach(function(site){
+	var sitesItem = document.createElement('div');
+	sitesItem.classList.add('sites__item')
+	sitesItem.insertAdjacentHTML('afterbegin', 
+		'<div data-modal="test-1" data-tooltip="' + site.name + '" class="sites__inner">' +
+			'<div class="sites__title">' + site.name + '</div>' +
+		'</div>'
+		);
+	;
+	if(site.hasOwnProperty('big') && site.big) {
+		sitesItem.classList.add('sites__item--big')
+	}
+	sitesContainer.appendChild(sitesItem);
 });
 
 
@@ -119,19 +151,3 @@ for (var i = 0; i < toolTipItems.length; i++){
 	});
 	
 };
-
-
-//json
-
-var sitesContainer = document.querySelector('.sites .con');
-
-var xhr = new XMLHttpRequest();
-xhr.open('GET', 'sites.json', false);
-xhr.send();
-var sitesJSON = JSON.parse(xhr.responseText);
-
-sitesJSON.forEach(function(site){
-	site = document.createElement('div');
-	site.classList.add('sites__item');
-	//sitesContainer.appendChild(site)
-});

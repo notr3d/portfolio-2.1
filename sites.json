@@ -1,15 +1,29 @@
 [
   {
 		"name": "site-1",
-		"fileName": "test-1"
+		"text": "text-1",
+		"big": true
 	},
 	{
 		"name": "site-2",
-		"fileName": "test-2"
+		"text": "text-2"
 	},
 	{
 		"name": "site-3",
-		"fileName": "test-3"
-	}
+		"text": "text-3"
+	},
+	{
+		"name": "site-4",
+		"text": "text-4"
+	},
+	{
+		"name": "site-5",
+		"text": "text-5"
+	},
+	{
+		"name": "site-6",
+		"text": "text-6",
+		"big": true
+	}	
 	
 ]
