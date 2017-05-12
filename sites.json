@@ -2,6 +2,7 @@
   {
 		"name": "Site-1",
 		"path": "site-1",
+		"pics": ["PM_Head_new7.jpg", "Pure-Artboard.jpg", "pure-artboard-1.jpg"],
 		"text": "text-1",
 		"feats": ["HTML", "CSS", "JS"],
 		"big": true

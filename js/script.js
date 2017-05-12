@@ -100,31 +100,15 @@ var openModal = function(modalId){
 			nextButton.dataset['modal'] = nextSite.path;
 			nextButton.dataset['tooltip'] = nextSite.name;
 			
-			var folder = 'pics'
-			var path = folder + '/' + site.path;
-			$.ajax({
-				url: path + '/',
-				success: function(data){
-					console.log(data)
-					/*var pics = [];
-					var pic = $(data).find('a[href$=".jpg"]');
-					pic.each(function(){
-						var picName = $(this).prop('href').split('/');
-						picName = picName[picName.length - 1];
-						pics.push(picName);						
-					});
-					for (let i = 0; i < pics.length; i++){
-						var pic = document.createElement('div');
-						pic.classList.add('modal__pic');
-						var img = '<img src="' + path + '/' + pics[i] + '">'
-						pic.insertAdjacentHTML('afterbegin', img);
-						modalPics.appendChild(pic)
-					}*/
-				},
-				error: function(){
-					console.log('pics not found')
+			if (site.pics){
+				for (let i = 0; i < site.pics.length; i++){
+					var pic = document.createElement('div');
+					pic.classList.add('modal__pic');
+					var img = '<img src="pics/' + site.path + '/' + site.pics[i] + '">';
+					pic.insertAdjacentHTML('afterbegin', img);
+					modalPics.appendChild(pic);
 				}
-			})	
+			}
 		}
 	});
 };
