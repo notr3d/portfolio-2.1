@@ -103,7 +103,7 @@ var openModal = function(modalId){
 			var folder = 'pics'
 			var path = folder + '/' + site.path;
 			$.ajax({
-				url: path,
+				url: path + '/',
 				success: function(data){
 					var pics = [];
 					var pic = $(data).find('a[href$=".jpg"]');
@@ -115,7 +115,7 @@ var openModal = function(modalId){
 					for (let i = 0; i < pics.length; i++){
 						var pic = document.createElement('div');
 						pic.classList.add('modal__pic');
-						var img = '<img src="' + path + pics[i] + '">'
+						var img = '<img src="' + path + '/' + pics[i] + '">'
 						pic.insertAdjacentHTML('afterbegin', img);
 						modalPics.appendChild(pic)
 					}
