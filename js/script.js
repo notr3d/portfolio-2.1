@@ -101,7 +101,7 @@ var openModal = function(modalId){
 			nextButton.dataset['tooltip'] = nextSite.name;
 			
 			var folder = 'pics'
-			var path = folder + '/' + site.path;
+			var path = folder + '/' + site.path + '/';
 			$.ajax({
 				url: path,
 				success: function(data){
@@ -115,7 +115,7 @@ var openModal = function(modalId){
 					for (let i = 0; i < pics.length; i++){
 						var pic = document.createElement('div');
 						pic.classList.add('modal__pic');
-						var img = '<img src="' + path + '/' + pics[i] + '">'
+						var img = '<img src="' + 'https://notr3d.github.io/portfolio-2.1/' + path + pics[i] + '">'
 						pic.insertAdjacentHTML('afterbegin', img);
 						modalPics.appendChild(pic)
 					}
