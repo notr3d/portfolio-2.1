@@ -100,7 +100,7 @@ var openModal = function(modalId){
 			nextButton.dataset['modal'] = nextSite.path;
 			nextButton.dataset['tooltip'] = nextSite.name;
 			
-			var folder = 'portfolio-2.1/pics'
+			var folder = 'pics'
 			var path = '/' + folder + '/' + site.path + '/';
 			$.ajax({
 				url: path,
