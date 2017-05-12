@@ -105,7 +105,8 @@ var openModal = function(modalId){
 			$.ajax({
 				url: path + '/',
 				success: function(data){
-					var pics = [];
+					console.log(data)
+					/*var pics = [];
 					var pic = $(data).find('a[href$=".jpg"]');
 					pic.each(function(){
 						var picName = $(this).prop('href').split('/');
@@ -118,7 +119,7 @@ var openModal = function(modalId){
 						var img = '<img src="' + path + '/' + pics[i] + '">'
 						pic.insertAdjacentHTML('afterbegin', img);
 						modalPics.appendChild(pic)
-					}
+					}*/
 				},
 				error: function(){
 					console.log('pics not found')
