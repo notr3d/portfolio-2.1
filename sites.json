@@ -1,27 +1,36 @@
 [
   {
 		"name": "Site-1",
+		"path": "site-1",
 		"text": "text-1",
+		"feats": ["HTML", "CSS", "JS"],
 		"big": true
 	},
 	{
 		"name": "Site-2",
-		"text": "text-2"
+		"path": "site-2",
+		"text": "text-2",
+		"feats": ["HTML", "CSS"]
 	},
 	{
 		"name": "Site-3",
-		"text": "text-3"
+		"path": "site-3",
+		"text": "text-3",
+		"feats": ["HTML"]
 	},
 	{
 		"name": "Site-4",
+		"path": "site-4",
 		"text": "text-4"
 	},
 	{
 		"name": "Site-5",
+		"path": "site-5",
 		"text": "text-5"
 	},
 	{
 		"name": "Site-6",
+		"path": "site-6",
 		"text": "text-6",
 		"big": true
 	}	
