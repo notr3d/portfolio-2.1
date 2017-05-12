@@ -103,7 +103,7 @@ var openModal = function(modalId){
 			var folder = 'pics'
 			var path = folder + '/' + site.path;
 			$.ajax({
-				url: path,
+				url: path + '/',
 				success: function(data){
 					var pics = [];
 					var pic = $(data).find('a[href$=".jpg"]');
