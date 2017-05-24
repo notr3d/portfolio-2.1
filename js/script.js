@@ -2,7 +2,7 @@ var body = document.body;
 
 //toggle buttons
 
-var toggleButtons = document.querySelectorAll('.js-toggle');
+var toggleButtons = document.querySelectorAll('.toggle-button');
 for (var i = 0; i < toggleButtons.length; i++){
 	toggleButtons[i].addEventListener('click', function(){
 		this.classList.toggle('active');
@@ -185,3 +185,31 @@ for (var i = 0; i < toolTipItems.length; i++){
 	});
 	
 };
+
+//scrolltop button
+
+var scrollTopButton = document.querySelector('.scroll-top');
+var scrollTop = function(){
+	var disnance = pageYOffset;
+	var step = 50;
+	var time = 1;
+	var timer = setInterval(function(){
+		disnance -= step;
+		if (disnance <= 0){
+			clearInterval(timer)
+		} else {
+			scrollTo(0, disnance);
+		};		
+	}, time);
+}
+scrollTopButton.addEventListener('click', function(){	
+   scrollTop();
+});
+var pageYThreshold = 50;
+document.addEventListener('scroll', function(){
+	if (pageYOffset > pageYThreshold){
+		scrollTopButton.classList.add('active')
+	} else {
+		scrollTopButton.classList.remove('active')
+	}
+});

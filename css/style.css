@@ -230,6 +230,13 @@ img {
   right: 15px;
   width: 45px;
   height: 45px;
+  visibility: hidden;
+  opacity: 0;
+  transition: .1s;
+}
+.scroll-top.active {
+  visibility: visible;
+  opacity: 1;
 }
 .js-toggle.active {
   background: #000;

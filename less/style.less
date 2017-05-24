@@ -57,6 +57,13 @@ img {
 	right: 15px;
 	width: 45px;
 	height: 45px;
+	visibility: hidden;
+	opacity: 0;
+	transition: .1s;
+	&.active {
+		visibility: visible;
+		opacity: 1;
+	}
 }
 
 .js-toggle.active {
