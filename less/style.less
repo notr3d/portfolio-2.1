@@ -7,6 +7,9 @@
 @t: ~ "(min-width: 768px)";
 @d: ~ "(min-width: 1280px)";
 
+@black: #333;
+@white: #fff;
+
 * {
 	box-sizing: border-box;
 }
@@ -15,9 +18,14 @@ body {
 	margin: 0;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1rem;
+	color: @black;
 	&.modal-open {
 		overflow: hidden;
 	}
+}
+
+h1, h2, h3, h4, h5, h6, .header {
+	font-family: 'Open Sans Condensed', sans-serif;
 }
 
 button {
@@ -28,11 +36,8 @@ img {
 	max-width: 100%;
 }
 
-
-
 .site {
-	min-height: 100vh;
-	display: flex;
+	
 }
 
 .site-wrapper {
@@ -51,20 +56,6 @@ img {
 //	padding: 30px;
 }
 
-.scroll-top {
-	position: fixed;
-	bottom: 15px;
-	right: 15px;
-	width: 45px;
-	height: 45px;
-	visibility: hidden;
-	opacity: 0;
-	transition: .1s;
-	&.active {
-		visibility: visible;
-		opacity: 1;
-	}
-}
 
 .js-toggle.active {
 	background: #000;
@@ -90,9 +81,22 @@ img {
 
 
 .con {
-	max-width: 1000px;
+	max-width: 600px;
 	margin: 0 auto;
-	
+	@media @t {
+		max-width: 800px;
+	}
+	@media @d {
+		max-width: 1000px;
+	}
+}
+
+.section {
+	min-height: 100vh;
+	padding: 70px 16px 16px;
+	&:first-child {
+		padding: 0;
+	}
 }
 
 .sites {

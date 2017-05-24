@@ -4,44 +4,62 @@
 	<title>notr3d's portfolio</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&amp;subset=cyrillic-ext" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 	
 	<div class="site">
-		<aside class="site-aside">
+		<!--<aside class="site-aside">
 			<div class="site-aside__wrapper">
 				aside
 			</div>
 			<button class="toggle-button site-aside__toggle-button">toggle aside</button>
-		</aside>
+		</aside>-->
 
 		<div class="site-wrapper">
-			<header class="site-header">
-				header
+			<header class="section intro">
+				<h1 class="intro__subtitle">Портфолио веб-разработчика</h1>
+				<div class="intro__title">Александр Некрасов</div>
+				<nav class="site-nav">
+					<div class="site-nav__wrapper">
+						<div class="site-nav__item">
+							<a href="#portfolio">Портфолио</a>
+						</div>
+						<div class="site-nav__item">
+							<a href="#resume">Резюме</a>
+						</div>
+						<div class="site-nav__item">
+							<a href="#contacts">Контакты</a>
+						</div>
+					</div>
+					<button class="scroll-top"></button>					
+				</nav>
 			</header>
 
 			<main class="site-main" id="test">
 
 				<div class="site-content">
-					<div class="sites" id="sites">
-						<!--<div class="sites__item">
-							<div data-modal="test-1" data-tooltip="Site name" class="sites__inner">
-								<div class="sites__title">Site name</div>
-							</div>
-						</div>-->				
-						
+					<div class="section" id="portfolio">
+						<div class="sites" id="sites">
+							<!--<div class="sites__item">
+								<div data-modal="test-1" data-tooltip="Site name" class="sites__inner">
+									<div class="sites__title">Site name</div>
+								</div>
+							</div>-->				
+
+						</div>
 					</div>
+					<div class="section" id="resume">резюме</div>
+					<div class="section" id="contacts">контакты</div>
 				</div>
 				
 			</main>
 
 			<footer class="site-footer">
 				footer
-			</footer>
-
-			<button class="scroll-top"></button>
+			</footer>			
 
 			<div class="modal">
 				<button data-tooltip="prev" class="modal__button modal__button--prev">prev</button>
