@@ -353,9 +353,8 @@ img {
 .section {
   min-height: 100vh;
   padding: 70px 16px 16px;
-}
-.section:first-child {
-  padding: 0;
+  border: solid #333;
+  border-width: 1px 2px;
 }
 .sites {
   display: -webkit-flex;

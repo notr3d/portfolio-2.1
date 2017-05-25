@@ -191,37 +191,57 @@ for (var i = 0; i < toolTipItems.length; i++){
 
 var scrollTopButton = document.querySelector('.scroll-top');
 var scrollToEl = function(i){
-	/*var disnance = pageYOffset;
-	var step = 50;
-	var time = 1;
-	var timer = setInterval(function(){
-		disnance -= step;
-		if (disnance <= 0){
-			clearInterval(timer)
-		} else {
-			scrollTo(0, disnance);
-		};		
-	}, time);*/
-	var step = 50;
-	var time = 1;
+//	var step;
+//	var time = 5;
+//	var distance = 0;
+//	if (pageYOffset > i){ //top		
+//		distance = pageYOffset - i;
+//		step = distance / 10;
+//		var timer = setInterval(function(){
+//			if (distance > step){
+//				distance -= step;
+//				console.log(distance)
+//				scrollTo(0, pageYOffset - step);
+//			} else if (distance <= step){
+//				clearInterval(timer);
+//			}
+//		})
+//	} else if (pageYOffset < i){ //bot		
+//		distance = i - pageYOffset;
+//		step = distance / 10;
+//		var timer = setInterval(function(){
+//			if (distance > step){
+//				distance -= step;
+//				console.log(distance)
+//				scrollTo(0, pageYOffset + step);
+//			} else if (distance <= step){
+//				clearInterval(timer);
+//			}
+//		})
+//	}
 	var distance = 0;
-	if (pageYOffset > i){ //top		
+	var step = 50;
+	var time = 5;
+	var timer;
+	if (pageYOffset > i){
 		distance = pageYOffset - i;
-		var timer = setInterval(function(){
-			if (distance > 0){
-				scrollTo(0, pageYOffset - step);
+		timer = setInterval(function(){
+			if (distance > step){
 				distance -= step;
-			} else if (distance <= 0){
+				scrollTo(0, pageYOffset - step);
+			} else if (distance <= step){
+				scrollTo(0, pageYOffset - distance);
 				clearInterval(timer);
 			}
 		})
-	} else if (pageYOffset < i){ //bot		
+	} else if (pageYOffset < i){
 		distance = i - pageYOffset;
-		var timer = setInterval(function(){
-			if (distance > 0){
-				scrollTo(0, pageYOffset + step);
+		timer = setInterval(function(){
+			if (distance > step){
 				distance -= step;
-			} else if (distance <= 0){
+				scrollTo(0, pageYOffset + step);
+			} else if (distance <= step){
+				scrollTo(0, pageYOffset + distance);
 				clearInterval(timer);
 			}
 		})
