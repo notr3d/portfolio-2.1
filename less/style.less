@@ -102,17 +102,30 @@ img {
 }
 
 .sites {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	flex-wrap: wrap;
-	padding: 8px;
+	&__head {
+		padding: 8px;
+		button {
+			margin: 8px;
+		}
+	}
+	&__category {
+		margin: 8px;
+	}
+	&__body {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex-wrap: wrap;
+		padding: 8px;
+	}
 	&__item {
 		height: 200px;
 		flex-basis: 100%;
 		padding: 8px;
+		transition: .5s;
+		max-height: 1000px;
 		@media @t {
 			flex-basis: 50%;
 		}
@@ -127,6 +140,15 @@ img {
 				flex-basis: 50%;
 			}
 			
+		}
+		&.hidden {			
+			padding: 0;
+			@media @m {
+				max-height: 0;
+			}
+			@media @t {
+				flex-basis: 0;
+			}
 		}
 	}
 	&__inner {

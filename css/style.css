@@ -356,7 +356,16 @@ img {
   border: solid #333;
   border-width: 1px 2px;
 }
-.sites {
+.sites__head {
+  padding: 8px;
+}
+.sites__head button {
+  margin: 8px;
+}
+.sites__category {
+  margin: 8px;
+}
+.sites__body {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -369,6 +378,8 @@ img {
   height: 200px;
   flex-basis: 100%;
   padding: 8px;
+  transition: .5s;
+  max-height: 1000px;
 }
 @media (min-width: 768px) {
   .sites__item {
@@ -388,6 +399,19 @@ img {
 @media (min-width: 1280px) {
   .sites__item--big {
     flex-basis: 50%;
+  }
+}
+.sites__item.hidden {
+  padding: 0;
+}
+@media (max-width: 767px) {
+  .sites__item.hidden {
+    max-height: 0;
+  }
+}
+@media (min-width: 768px) {
+  .sites__item.hidden {
+    flex-basis: 0;
   }
 }
 .sites__inner {

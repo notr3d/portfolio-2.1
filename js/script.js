@@ -27,22 +27,54 @@ var sitesJSON = JSON.parse(xhr.responseText);
 
 var sitesContainer = document.querySelector('#sites');
 
+var siteCategories = ['Все'];
+
 sitesJSON.forEach(function(site){
 	var sitesItem = document.createElement('div');
 	sitesItem.classList.add('sites__item');
+	sitesItem.setAttribute('data-cat', site.category);
 	var sitesItemTemplate = 
-		'<div data-modal="' + site.path + '" data-tooltip="' + site.name + '" class="sites__inner">' +
+		'<div data-modal="' + site.path + '" data-tooltip="' + site.name + ' " class="sites__inner">' +
 			'<div class="sites__title">' + site.name + '</div>' +
 		'</div>';
-	sitesItem.insertAdjacentHTML('afterbegin', sitesItemTemplate);
-	;
+	sitesItem.insertAdjacentHTML('afterbegin', sitesItemTemplate);	;
 	if (site.hasOwnProperty('big') && site.big == true){
 		sitesItem.classList.add('sites__item--big')
 	};	
 	
 	sitesContainer.appendChild(sitesItem);	
+	
+	siteCategories.push(site.category);
 });
 
+//site cats init
+siteCategories = Array.from(new Set(siteCategories));
+var siteCategoriesContainer = document.getElementById('categories');
+for (let i = 0; i < siteCategories.length; i++){
+	var siteCategoriesItem = document.createElement('button');
+	siteCategoriesItem.setAttribute('id', siteCategories[i]);
+	var siteCategoriesItemText = document.createTextNode(siteCategories[i]);
+	siteCategoriesItem.appendChild(siteCategoriesItemText);
+	
+	siteCategoriesContainer.appendChild(siteCategoriesItem)
+}
+
+//site filer 
+var filterSites = function(catId){	
+	for (let i = 0; i < sitesContainer.children.length; i++){
+		sitesContainer.children[i].classList.remove('hidden')
+		if (catId != sitesContainer.children[i].dataset['cat']){
+			sitesContainer.children[i].classList.add('hidden')
+		}
+	}	
+}
+
+
+for (let i = 0; i < siteCategoriesContainer.children.length; i++){
+	siteCategoriesContainer.children[i].addEventListener('click', function(){
+		filterSites(this.id)
+	})
+}
 
 //site modal
 var prevButton = document.querySelector('.modal__button--prev');
