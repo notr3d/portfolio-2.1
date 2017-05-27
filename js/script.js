@@ -57,13 +57,14 @@ for (let i = 0; i < siteCategories.length; i++){
 	siteCategoriesItem.appendChild(siteCategoriesItemText);
 	
 	siteCategoriesContainer.appendChild(siteCategoriesItem)
-}
+};
+siteCategoriesContainer.firstElementChild.classList.add('active');
 
 //site filer 
 var filterSites = function(catId){	
 	for (let i = 0; i < sitesContainer.children.length; i++){
 		sitesContainer.children[i].classList.remove('hidden')
-		if (catId != sitesContainer.children[i].dataset['cat']){
+		if (catId != sitesContainer.children[i].dataset['cat'] && catId != 'Все'){
 			sitesContainer.children[i].classList.add('hidden')
 		}
 	}	
@@ -72,7 +73,11 @@ var filterSites = function(catId){
 
 for (let i = 0; i < siteCategoriesContainer.children.length; i++){
 	siteCategoriesContainer.children[i].addEventListener('click', function(){
-		filterSites(this.id)
+		for (let i = 0; i < this.parentNode.children.length; i++){
+			this.parentNode.children[i].classList.remove('active')
+		};
+		this.classList.add('active');		
+		filterSites(this.id);
 	})
 }
 
@@ -330,3 +335,44 @@ for (let i = 0; i < siteNavButtons.length; i++){
 		scrollToEl(currentSectionOffsetTop);
 	})
 }
+
+//fancy buttons
+var showClicled = function(button){
+	var x = event.clientX - button.offsetLeft;
+	var y = event.clientY - button.offsetTop;
+	var circle = document.createElement('span');
+	circle.style.left = x;
+	circle.style.top = y;
+	button.appendChild(circle);
+	var radius = 0;
+	var margin = 0;
+	var size = 0;
+	if (button.offsetWidth >= button.offsetHeight){
+		size = button.offsetWidth * 2;
+	} else {
+		size = button.offsetHeight * 2;
+	};	
+	var drawCircle;	
+	drawCircle = setInterval(function(){		
+		if (radius < size){
+			radius += 3;
+			margin = -radius / 2;
+			circle.style.width = radius;
+			circle.style.height = radius;
+			circle.style.marginLeft = margin;
+			circle.style.marginTop = margin;
+		} else {
+			clearInterval(drawCircle);
+			circle.classList.add('hidden');
+			setTimeout(function(){
+				circle.remove();
+			}, 300)
+		}
+	})
+}
+var fancyButtons = document.querySelectorAll('.fancy-button');
+for (let i = 0; i < fancyButtons.length; i++){
+	fancyButtons[i].addEventListener('mousedown', function(){
+		showClicled(this)
+	});
+};

@@ -9,6 +9,7 @@
 
 @black: #333;
 @white: #fff;
+@red: red;
 
 * {
 	box-sizing: border-box;
@@ -30,6 +31,21 @@ h1, h2, h3, h4, h5, h6, .header {
 
 button {
 	cursor: pointer;
+}
+.fancy-button {
+	position: relative;
+ 	overflow: hidden;
+	span {
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 0.2);
+		transition: opacity .3s;
+		&.hidden {
+			opacity: 0;
+		}
+	}
 }
 
 img {
@@ -64,7 +80,7 @@ img {
 
 .tooltip {
 	position: fixed;
-	background: #000;
+	background: rgba(51, 51, 51, 0.75);
 	color: #fff;
 	visibility: hidden;
 	opacity: 0;
@@ -103,9 +119,39 @@ img {
 
 .sites {
 	&__head {
+		text-align: center;
 		padding: 8px;
 		button {
+			background: none;
+			border: none;
 			margin: 8px;
+			text-transform: uppercase;
+			font-size: 1.5rem;
+			.header();
+			position: relative;
+			padding: .25rem 0;
+			&::before {
+				content: '';
+				display: inline-block;
+				width: 0;
+				height: 5px;
+				background: @black;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				transition: .3s;
+			}
+			&:hover {
+				&::before {
+					width: 100%;
+				}
+			}
+			&.active {
+				cursor: default;
+				&::before {
+					width: 100%;
+				}
+			}
 		}
 	}
 	&__category {

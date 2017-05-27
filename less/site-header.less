@@ -61,6 +61,7 @@
 			&.active {
 				background: @black;
 				color: @white;
+				cursor: default;
 			}
 		}
 	}
@@ -94,4 +95,16 @@
 	height: 54px;
 	width: 0;
 	transition: .3s;
+	background: none;
+	overflow: hidden;
+	svg {
+		height: 60%;
+		transition: .3s;
+	}
+	&:hover {
+		background-color: @black;
+		svg {
+			fill: @white;
+		}
+	}
 }
