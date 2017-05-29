@@ -296,7 +296,27 @@ var contentSectionTopCoords = [];
 for (let i = 0; i < contentSections.length; i++){
 	contentSectionTopCoords.push(contentSections[i].offsetTop)
 };
-document.addEventListener('scroll', function(){	
+
+var fadeInInit = function(elArray){
+  for (let i = 0; i < elArray.length; i++){
+    var el = document.querySelectorAll(elArray[i]);
+    for (let i = 0; i < el.length; i++){
+      el[i].classList.add('fade-in')
+    }
+  }
+}
+fadeInInit(['.section-heading', '.sites__head', '.sites__item', '.fancy-table'])
+var fadeInEls = document.querySelectorAll('.fade-in');
+
+
+document.addEventListener('scroll', function(){
+  //fadeIn
+  for (let i = 0; i < fadeInEls.length; i++){
+    if (pageYOffset + window.innerHeight > fadeInEls[i].offsetTop + fadeInEls[i].offsetHeight / 2){
+      fadeInEls[i].classList.add('faded-in')
+    }
+  };
+  
 	/*if (pageYOffset > pageYThreshold){
 		scrollTopButton.classList.add('active')
 	} else {
@@ -307,8 +327,8 @@ document.addEventListener('scroll', function(){
 		siteNav.classList.add('active')
 	} else if (pageYOffset < siteNavOffsetTop){
 		siteNav.classList.remove('active')
-	};
-	
+	};  
+  
 	for (let i = 0; i <= contentSectionTopCoords.length; i++){
 		if (pageYOffset + siteNav.offsetHeight > contentSectionTopCoords[contentSectionTopCoords.length - i]){
 			for (let i = 0; i < siteNavButtons.length; i++){
@@ -321,7 +341,7 @@ document.addEventListener('scroll', function(){
 				siteNavButtons[i].classList.remove('active')
 			}
     }
-	}
+	}  
 });
 
 
@@ -378,3 +398,5 @@ for (let i = 0; i < fancyButtons.length; i++){
 		showClicled(this)
 	});
 };
+
+

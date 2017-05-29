@@ -223,6 +223,7 @@ img {
 			text-transform: uppercase;
 			font-size: 1.5rem;
 			.header();
+      font-weight: bold;
 			position: relative;
 			padding: .25rem 0;
 			&::before {
@@ -320,4 +321,14 @@ img {
 			transition: .1s;
 		}
 	}
+}
+
+.fade-in {
+  transform: translateY(-50px) scale(.5);
+  opacity: 0;
+  transition: .3s;
+}
+.faded-in {
+  transform: none;
+  opacity: 1;
 }
