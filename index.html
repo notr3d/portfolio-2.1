@@ -2,14 +2,19 @@
 
 <head>
 	<title>notr3d's portfolio</title>
-	<meta charset="utf-8">
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&amp;subset=cyrillic-ext" rel="stylesheet">
+
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-	
+
 	<div class="site">
 		<!--<aside class="site-aside">
 			<div class="site-aside__wrapper">
@@ -50,7 +55,7 @@
 						  </g>
 						</svg>
 
-					</button>					
+					</button>
 				</nav>
 			</header>
 
@@ -59,6 +64,10 @@
 				<div class="site-content">
 					<div class="section" id="portfolio">
 						<div class="con">
+						  <div class="section-heading">
+								<h2 class="section-heading__title">Портфолио</h2>
+								<div class="section-heading__subtitle">subtitle</div>
+							</div>
 							<div class="sites">
 								<div class="sites__head" id="categories">
 
@@ -68,20 +77,92 @@
 									<div data-modal="test-1" data-tooltip="Site name" class="sites__inner">
 										<div class="sites__title">Site name</div>
 									</div>
-								</div>-->				
+								</div>-->
 
 							</div>
 						</div>
 					</div>
-					<div class="section" id="resume">резюме</div>
-					<div class="section" id="contacts">контакты</div>
+					<div class="section" id="resume">
+						<div class="con">
+							<div class="section-heading">
+								<h2 class="section-heading__title">Резюме</h2>
+								<div class="section-heading__subtitle">subtitle</div>
+							</div>
+							<!--
+							<div class="fancy-text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum consectetur maiores, odit delectus quae deserunt, error maxime nihil officia, possimus animi? Totam debitis laboriosam commodi earum accusamus nisi illum sapiente!</p>
+								<p>Ipsam assumenda possimus delectus quod, quo consequuntur! Maxime libero sit harum nesciunt ab adipisci enim, sed blanditiis, fugiat sint itaque nisi dignissimos rerum mollitia magni doloremque accusantium? Temporibus, quis ex.</p>
+							</div>
+							<h3 class="section__header">header</h3>
+-->
+							<table class="fancy-table">
+								<tr>
+									<th>ФИО</th>
+									<td>Некрасов Александр Юрьевич</td>
+								</tr>
+								<tr>
+									<th>Возраст</th>
+									<td>26 лет</td>
+								</tr>
+								<tr>
+									<th>Языки</th>
+									<td>Русский, английский</td>
+								</tr>
+								<tr>
+									<th>Образование</th>
+									<td>
+										<ul class="fancy-ul">
+											<li><a href="http://it.mgppu.ru/">МГППУ</a>, математик-программист, 2008-2013</li>
+											<li>Учебный центр при МГТУ им. Н.Э. Баумана <a href="http://www.specialist.ru/">Специалист</a>, front-end разработчик, 2015-2016</li>
+											<li>Интерактивные онлайн-курсы <a href="https://htmlacademy.ru">HTML Academy</a>, Продвинутый интенсив по HTML и CSS, 2015</li>
+											<li><a href="https://learn.javascript.ru/courses">learn.javascript.ru</a>, курс "JavaScript/DOM/интерфейсы", 2015</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th>Навыки</th>
+									<td>
+										<ul class="fancy-ul">
+											<li>HTML, HTML 5</li>
+											<li>CSS, CSS3, LESS</li>
+											<li>JavaScript, jQuery, основы PHP</li>
+											<li>Adobe Photoshop, Adobe DX (Sketch)</li>
+											<li>WordPress, 1С Битрикс, MODX, Magento, OpenCart, CS-Cart</li>
+											<li>Git</li>
+											<li>SVG</li>
+											<li>Яндекс БЭМ</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th>Опыт</th>
+									<td>
+										<ul class="fancy-ul">
+											<li><a href="http://bigmsk.ru/">АО БиГ</a>, разработка и поддержка сайтов компании</li>
+											<li><a href="http://renart.ru/">Renaissance Art Group</a>, разработка поддержка сайтов, верстка email рассылок</li>
+										</ul>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="section" id="contacts">
+					  <div class="con">
+					    <div class="section-heading">
+								<h2 class="section-heading__title">Контакты</h2>
+								<div class="section-heading__subtitle">subtitle</div>
+							</div>
+					  </div>
+					</div>
 				</div>
-				
+
 			</main>
 
+<!--
 			<footer class="site-footer">
 				footer
-			</footer>			
+			</footer>
+-->
 
 			<div class="modal">
 				<button data-tooltip="prev" class="modal__button modal__button--prev">
@@ -122,7 +203,7 @@
 							<h2 id="modal-title" class="modal__title">Modal name</h2>
 							<div id="modal-text" class="modal__text">Modal text</div>
 							<div id="modal-feats" class="modal__feats"></div>
-						</div>						
+						</div>
 						<div class="modal__pics" id="modal-pics"></div>
 					</div>
 					<button class="modal__button modal__button--close" data-tooltip="close modal">
@@ -140,13 +221,13 @@
 					</button>
 				</div>
 			</div>
-			
+
 			<div class="tooltip">tooltip text</div>
 
 		</div>
-	</div>	
+	</div>
 
-<!--	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+	<!--	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
 	<script src="js/script.js"></script>
 
 </body>
