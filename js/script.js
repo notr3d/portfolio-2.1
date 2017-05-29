@@ -296,9 +296,7 @@ var contentSectionTopCoords = [];
 for (let i = 0; i < contentSections.length; i++){
 	contentSectionTopCoords.push(contentSections[i].offsetTop)
 };
-document.addEventListener('scroll', function(){
-	//console.log(pageYOffset);
-	
+document.addEventListener('scroll', function(){	
 	/*if (pageYOffset > pageYThreshold){
 		scrollTopButton.classList.add('active')
 	} else {
@@ -312,13 +310,17 @@ document.addEventListener('scroll', function(){
 	};
 	
 	for (let i = 0; i <= contentSectionTopCoords.length; i++){
-		if (pageYOffset > contentSectionTopCoords[contentSectionTopCoords.length - i]){
+		if (pageYOffset + siteNav.offsetHeight > contentSectionTopCoords[contentSectionTopCoords.length - i]){
 			for (let i = 0; i < siteNavButtons.length; i++){
 				siteNavButtons[i].classList.remove('active')
 			}
 			siteNavButtons[contentSectionTopCoords.length - i].classList.add('active');		
 			return;
-		}
+		} else {
+      for (let i = 0; i < siteNavButtons.length; i++){
+				siteNavButtons[i].classList.remove('active')
+			}
+    }
 	}
 });
 
