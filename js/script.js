@@ -190,13 +190,12 @@ document.addEventListener('keyup', function(e){
 	
 });
 
-var modalNavButtons = modal.querySelectorAll('.modal__button');
-for (var i = 0; i < modalNavButtons.length; i++){
-	modalNavButtons[i].addEventListener('click', function(e){
-		e.stopPropagation();
-	})
-};
-
+var modalPic = document.querySelector('.modal__pic');
+for (let i = 0; i < modalPics.length; i++){
+  modalPic[i].addEventListener('click', function(){
+    console.log(1);
+  })
+}
 
 
 
