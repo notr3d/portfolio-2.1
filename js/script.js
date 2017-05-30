@@ -1,6 +1,6 @@
 var body = document.body;
 
-//toggle buttons
+//toggle all buttons
 
 var toggleButtons = document.querySelectorAll('.toggle-button');
 for (var i = 0; i < toggleButtons.length; i++){
@@ -60,7 +60,7 @@ for (let i = 0; i < siteCategories.length; i++){
 };
 siteCategoriesContainer.firstElementChild.classList.add('active');
 
-//site filer 
+//site filter 
 var filterSites = function(catId){	
 	for (let i = 0; i < sitesContainer.children.length; i++){
 		sitesContainer.children[i].classList.remove('hidden')
@@ -297,11 +297,13 @@ for (let i = 0; i < contentSections.length; i++){
 	contentSectionTopCoords.push(contentSections[i].offsetTop)
 };
 
+var fadeInClasses = ['fade-in--top', 'fade-in--right', 'fade-in--bottom', 'fade-in--left'];
 var fadeInInit = function(elArray){
   for (let i = 0; i < elArray.length; i++){
     var el = document.querySelectorAll(elArray[i]);
-    for (let i = 0; i < el.length; i++){
-      el[i].classList.add('fade-in')
+    for (let j = 0; j < el.length; j++){
+      el[j].classList.add('fade-in');
+      el[j].classList.add(fadeInClasses[Math.floor(Math.random() * fadeInClasses.length)]);
     }
   }
 }
@@ -312,7 +314,7 @@ var fadeInEls = document.querySelectorAll('.fade-in');
 document.addEventListener('scroll', function(){
   //fadeIn
   for (let i = 0; i < fadeInEls.length; i++){
-    if (pageYOffset + window.innerHeight > fadeInEls[i].offsetTop + fadeInEls[i].offsetHeight / 2){
+    if (pageYOffset + window.innerHeight > fadeInEls[i].offsetTop + fadeInEls[i].offsetHeight * 0.25){
       fadeInEls[i].classList.add('faded-in')
     }
   };

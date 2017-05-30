@@ -324,9 +324,21 @@ img {
 }
 
 .fade-in {
-  transform: translateY(-50px) scale(.5);
   opacity: 0;
   transition: .3s;
+  &--top {    
+    transform: translateY(-150px) scale(.25);
+  }
+  &--right {    
+    transform: translateX(150px) scale(.25);
+  }
+  &--bottom {    
+    transform: translateY(150px) scale(.25);
+  }
+  &--left {    
+    transform: translateX(-150px) scale(.25);
+  }
+  
 }
 .faded-in {
   transform: none;
