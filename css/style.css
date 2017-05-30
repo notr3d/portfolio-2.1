@@ -180,7 +180,6 @@
   right: 0;
   bottom: 0;
   left: 0;
-  visibility: hidden;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -189,7 +188,17 @@
   align-items: flex-start;
   padding: 80px 16px 16px;
   z-index: 20;
-  overflow: hidden;
+  visibility: hidden;
+}
+@media (min-width: 768px) {
+  .modal {
+    padding: 16px 80px;
+  }
+}
+@media (min-width: 1280px) {
+  .modal {
+    align-items: stretch;
+  }
 }
 .modal.active {
   visibility: visible;
@@ -204,6 +213,23 @@
   display: -o-flex;
   display: flex;
   flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .modal__body {
+    max-width: 800px;
+  }
+}
+@media (min-width: 1280px) {
+  .modal__body {
+    max-width: 1000px;
+  }
+}
+@media (min-width: 1280px) {
+  .modal__body {
+    flex-direction: row;
+  }
 }
 .modal__button {
   position: absolute;
@@ -222,13 +248,34 @@
   bottom: 100%;
   margin-bottom: 16px;
 }
+@media (min-width: 768px) {
+  .modal__button--slide {
+    bottom: auto;
+    margin: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
 .modal__button--prev {
   left: 0;
   transform: rotate(-90deg);
 }
+@media (min-width: 768px) {
+  .modal__button--prev {
+    left: auto;
+    right: 100%;
+    margin-right: 16px;
+  }
+}
 .modal__button--next {
   left: 48px;
   transform: rotate(90deg);
+}
+@media (min-width: 768px) {
+  .modal__button--next {
+    left: 100%;
+    margin: 17px;
+  }
 }
 .modal__button--close {
   right: 16px;
@@ -239,11 +286,23 @@
   max-height: 50%;
   background: #fff;
 }
+@media (min-width: 1280px) {
+  .modal__descr {
+    flex-basis: 35%;
+  }
+}
 .modal__pics {
   flex-grow: 1;
   overflow-y: scroll;
   background: #fff;
   margin-top: 16px;
+}
+@media (min-width: 1280px) {
+  .modal__pics {
+    margin-top: 0;
+    margin-left: 16px;
+    flex-basis: 65%;
+  }
 }
 .modal__pic {
   padding: 8px 16px;

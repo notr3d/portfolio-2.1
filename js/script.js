@@ -296,7 +296,7 @@ for (let i = 0; i < contentSections.length; i++){
 	contentSectionTopCoords.push(contentSections[i].offsetTop)
 };
 
-var fadeInClasses = ['fade-in--top', 'fade-in--right', 'fade-in--bottom', 'fade-in--left'];
+var fadeInClasses = ['fade-in--top', 'fade-in--bottom', 'fade-in--left'];
 var fadeInInit = function(elArray){
   for (let i = 0; i < elArray.length; i++){
     var el = document.querySelectorAll(elArray[i]);
