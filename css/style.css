@@ -186,9 +186,10 @@
   display: -ms-flex;
   display: -o-flex;
   display: flex;
-  align-items: center;
-  padding: 16px;
+  align-items: flex-start;
+  padding: 80px 16px 16px;
   z-index: 20;
+  overflow: hidden;
 }
 .modal.active {
   visibility: visible;
@@ -218,15 +219,16 @@
   fill: #fff;
 }
 .modal__button--slide {
-  top: 50%;
+  bottom: 100%;
+  margin-bottom: 16px;
 }
 .modal__button--prev {
   left: 0;
-  transform: translateY(-50%) rotate(-90deg);
+  transform: rotate(-90deg);
 }
 .modal__button--next {
-  right: 0;
-  transform: translateY(-50%) rotate(90deg);
+  left: 48px;
+  transform: rotate(90deg);
 }
 .modal__button--close {
   right: 16px;
