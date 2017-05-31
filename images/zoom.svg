@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="484 259 307.957 306.957">
+  <defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: #fff;
+        stroke-width: 30px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Ellipse_1" data-name="Ellipse 1" class="cls-1" transform="translate(484 259)">
+    <circle class="cls-3" cx="112.5" cy="112.5" r="112.5"/>
+    <circle class="cls-4" cx="112.5" cy="112.5" r="97.5"/>
+  </g>
+  <rect id="Rectangle_1" data-name="Rectangle 1" class="cls-2" width="91" height="30" transform="translate(611.5 326.5) rotate(90)"/>
+  <rect id="Rectangle_2" data-name="Rectangle 2" class="cls-2" width="91" height="30" transform="translate(551 357)"/>
+  <rect id="Rectangle_3" data-name="Rectangle 3" class="cls-2" width="175" height="30" transform="translate(668.213 421) rotate(45)"/>
+</svg>

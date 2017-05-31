@@ -34,6 +34,7 @@
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
+  -webkit-backface-visibility: none;
 	&__wrapper {
 		display: -webkit-flex;
 		display: -moz-flex;
@@ -65,6 +66,9 @@
 			}
 		}
 	}
+  .scroll-top {
+    width: 0;
+  }
 	&.active {
 		position: fixed;
 		left: 0;
@@ -92,8 +96,8 @@
 	}*/
 	padding: 0;
 	border: none;
+	width: 54px;
 	height: 54px;
-	width: 0;
 	transition: .3s;
 	background: none;
 	overflow: hidden;

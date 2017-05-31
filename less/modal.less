@@ -10,9 +10,9 @@
   display: -ms-flex;
   display: -o-flex;
   display: flex;
-  align-items: flex-start;
   padding: 80px 16px 16px;
   z-index: 20;
+  -webkit-backface-visibility: none;
   visibility: hidden;
   @media @t {
     padding: 16px 80px;
@@ -36,6 +36,7 @@
     .con();
     @media @d {
       flex-direction: row;
+      align-items: flex-start;
     }
   }
   &__button {
@@ -46,46 +47,59 @@
     border: none;
     padding: 0;
     z-index: 30;
+    transition: background .3s;
     svg {
       height: 60%;
       fill: @white;
+      transition: fill .3s;
     }
     &--slide {
       bottom: 100%;
-      margin-bottom: 16px;
       @media @t {
         bottom: auto;
         margin: 0;
         top: 50%;
-        transform: translateY(-50%);
       }
     }
     &--prev {
       left: 0;
-      transform: rotate(-90deg);
+      transform: translateY(-16px) rotate(-90deg);
       @media @t {
         left: auto;
         right: 100%;
-        margin-right: 16px;
+        transform: translate(-16px, -50%) rotate(-90deg);
       }
     }
     &--next {
       left: 48px;
-      transform: rotate(90deg);
+      transform: translateY(-16px) rotate(90deg);
       @media @t {
         left: 100%;
-        margin: 17px;
+        transform: translate(16px, -50%) rotate(90deg);
       }
     }
     &--close {
       right: 16px;
       top: 16px;
     }
+    &:hover {
+      background: @white;
+      svg {
+        fill: @black;
+      }
+    }
   }
   &__descr {
     padding: 16px;
-    max-height: 50%;
+    max-height: 100%;
     background: @white;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
     @media @d {
       flex-basis: 35%;
     }
@@ -98,7 +112,11 @@
     @media @d {
       margin-top: 0;
       margin-left: 16px;
-      flex-basis: 65%;
+      flex-basis: 65%;      
+      max-height: 100%;
+    }
+    .scroll-top {
+      width: 100%;
     }
   }
   &__pic {
@@ -122,7 +140,33 @@
       display: inline-block;
       background: #eee;
       padding: 4px 8px;
-      margin-right: 8px;
+      margin-right: .5rem;
+      margin-bottom: 1rem;
     }
+  }
+  &__link {
+    margin-top: auto;  
+    text-align: center;
+    a {
+      display: inline-block;
+      color: @black;
+      border: 4px solid @black;
+      .header();
+      padding: .5rem;
+      font-size: 2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: .1s;
+      @media @d {
+        display: block;
+      }
+      &::before {
+        display: none;
+      }
+      &:hover {
+        background: @black;
+        color: @white;
+      }
+    }    
   }
 }

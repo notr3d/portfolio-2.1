@@ -1,0 +1,31 @@
+<svg id="Group_1" data-name="Group 1" xmlns="http://www.w3.org/2000/svg" viewBox="408 308 600 400">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #eee;
+        stroke-width: 20px;
+      }
+
+      .cls-2, .cls-4 {
+        fill: none;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Rectangle_1" data-name="Rectangle 1" class="cls-1" transform="translate(408 308)">
+    <rect class="cls-3" width="600" height="400"/>
+    <rect class="cls-4" x="10" y="10" width="580" height="380"/>
+  </g>
+  <path id="Path_1" data-name="Path 1" class="cls-2" d="M574.9,650.6H951.1L850.5,493.5l-31.6,17.4-49.1-97.5L665.5,555.6,625.2,532,509.7,650.6Z"/>
+  <g id="Ellipse_1" data-name="Ellipse 1" class="cls-1" transform="translate(499 373)">
+    <circle class="cls-3" cx="56.5" cy="56.5" r="56.5"/>
+    <circle class="cls-4" cx="56.5" cy="56.5" r="46.5"/>
+  </g>
+</svg>

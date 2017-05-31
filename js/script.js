@@ -35,6 +35,9 @@ sitesJSON.forEach(function(site){
 	sitesItem.setAttribute('data-cat', site.category);
 	var sitesItemTemplate = 
 		'<div data-modal="' + site.path + '" data-tooltip="' + site.name + ' " class="sites__inner">' +
+      '<div class="sites__pic">' + 
+        '<img src="pics/' + site.path + '/' + site.pics[Math.floor(Math.random() * site.pics.length)] + '">' +
+      '</div>' +
 			'<div class="sites__title">' + site.name + '</div>' +
 		'</div>';
 	sitesItem.insertAdjacentHTML('afterbegin', sitesItemTemplate);	;
@@ -44,7 +47,7 @@ sitesJSON.forEach(function(site){
 	
 	sitesContainer.appendChild(sitesItem);	
 	
-	siteCategories.push(site.category);
+	siteCategories.push(site.category);  
 });
 
 //site cats init
@@ -97,6 +100,7 @@ var modal = document.querySelector('.modal');
 var modalTitle = modal.querySelector('#modal-title');
 var modalText = modal.querySelector('#modal-text');
 var modalFeats = modal.querySelector('#modal-feats');
+var modalLink = modal.querySelector('#modal-link');
 var modalPics = modal.querySelector('#modal-pics');
 
 var openModal = function(modalId){
@@ -104,12 +108,14 @@ var openModal = function(modalId){
 	
 	modal.classList.add('active');		
 	modalFeats.innerHTML = '';
+  modalPics.parentElement.scrollTop = 0;
 	modalPics.innerHTML = '';
 	
 	sitesJSON.forEach(function(site, i){
 		if (site.path == modalId){
 			modalTitle.innerHTML = site.name;
-			modalText.innerHTML = site.text;	
+			modalText.innerHTML = site.text;
+      modalLink.setAttribute('href', 'http://' + site.link);
 			if (site.feats){				
 				for (let i = 0; i < site.feats.length; i++){
 					var feat = document.createElement('span');
@@ -160,10 +166,12 @@ modal.addEventListener('click', function(){
 	closeModal();
 });
 
-var modalBody = modal.querySelector('.modal__body');
-modalBody.addEventListener('click', function(e){
-	e.stopPropagation();
-});
+var modalBodyitems = modal.querySelector('.modal__body').children;
+for (let i = 0; i < modalBodyitems.length; i++){
+  modalBodyitems[i].addEventListener('click', function(e){
+    e.stopPropagation();
+  });
+}
 
 var modalOpenButtons = document.querySelectorAll('[data-modal]');
 for (var i = 0; i < modalOpenButtons.length; i++){
@@ -190,12 +198,6 @@ document.addEventListener('keyup', function(e){
 	
 });
 
-var modalPic = document.querySelector('.modal__pic');
-for (let i = 0; i < modalPics.length; i++){
-  modalPic[i].addEventListener('click', function(){
-    console.log(1);
-  })
-}
 
 
 
@@ -225,7 +227,7 @@ for (var i = 0; i < toolTipItems.length; i++){
 
 //scrolltop button
 
-var scrollTopButton = document.querySelector('.scroll-top');
+var scrollTopButton = document.querySelectorAll('.scroll-top');
 var scrollToEl = function(i){
 //	var step;
 //	var time = 5;
@@ -283,9 +285,15 @@ var scrollToEl = function(i){
 		})
 	}
 }
-scrollTopButton.addEventListener('click', function(){	
-   scrollToEl(0);
-});
+for (let i = 0; i < scrollTopButton.length; i++){
+  scrollTopButton[i].addEventListener('click', function(){
+    if (this.classList.contains('scroll-top--page')){
+      scrollToEl(0);
+    } else {
+      this.parentElement.scrollTop = 0;
+    }
+  })
+}
 //var pageYThreshold = 50;
 
 var siteNav = document.querySelector('.site-nav');
