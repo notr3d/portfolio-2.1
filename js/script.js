@@ -36,7 +36,7 @@ sitesJSON.forEach(function(site){
 	var sitesItemTemplate = 
 		'<div data-modal="' + site.path + '" data-tooltip="' + site.name + ' " class="sites__inner">' +
       '<div class="sites__pic">' + 
-        '<img src="pics/' + site.path + '/' + site.pics[Math.floor(Math.random() * site.pics.length)] + '">' +
+        '<img src="pics/' + site.path + '/' + site.pics[Math.floor(Math.random() * site.pics.length)].filename + '">' +
       '</div>' +
 			'<div class="sites__title">' + site.name + '</div>' +
 		'</div>';
@@ -147,8 +147,10 @@ var openModal = function(modalId){
 				for (let i = 0; i < site.pics.length; i++){
 					var pic = document.createElement('div');
 					pic.classList.add('modal__pic');
-					var img = '<img src="pics/' + site.path + '/' + site.pics[i] + '">';
-					pic.insertAdjacentHTML('afterbegin', img);
+					var picContent = 
+              '<h3>' + site.pics[i].title + '</h3>' +
+              '<img src="pics/' + site.path + '/' + site.pics[i].filename + '">';
+					pic.insertAdjacentHTML('afterbegin', picContent);
 					modalPics.appendChild(pic);
 				}
 			}

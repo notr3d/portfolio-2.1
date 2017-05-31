@@ -314,6 +314,7 @@
   overflow-y: scroll;
   background: #fff;
   margin-top: 16px;
+  padding: 1rem;
 }
 @media (min-width: 1280px) {
   .modal__pics {
@@ -324,16 +325,28 @@
   }
 }
 .modal__pics .scroll-top {
+  margin-top: 1rem;
   width: 100%;
 }
 .modal__pic {
-  padding: 8px 16px;
+  /*padding: 8px 16px;
+    &:first-child {
+      padding-top: 16px;
+    }
+    &:last-child {
+      padding-bottom: 16px;
+    }*/
 }
-.modal__pic:first-child {
-  padding-top: 16px;
+.modal__pic:not(:last-child) {
+  margin-bottom: 3rem;
 }
-.modal__pic:last-child {
-  padding-bottom: 16px;
+.modal__pic h3 {
+  margin: 0;
+  margin-bottom: .5rem;
+  text-align: center;
+}
+.modal__pic img {
+  border: 0.5rem solid #eee;
 }
 .modal__title {
   margin: 0;
@@ -342,12 +355,16 @@
 .modal__text {
   margin-bottom: 16px;
 }
+.modal__feats {
+  margin-bottom: 1rem;
+}
 .modal__feats span {
   display: inline-block;
   background: #eee;
   padding: 4px 8px;
   margin-right: .5rem;
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
+  font-weight: bold;
 }
 .modal__link {
   margin-top: auto;

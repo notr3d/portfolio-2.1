@@ -5,10 +5,22 @@
     "link": "yacht-line.ru",
 		"path": "yachtline",
 		"pics": [
-      "catalog.jpg", 
-      "product.jpg", 
-      "cart.jpg", 
-      "login.jpg"
+      {
+        "title": "Каталог",
+        "filename": "catalog.jpg"
+      },
+      {
+        "title": "Страница товара",
+        "filename": "product.jpg"
+      },
+      {
+        "title": "Корзина",
+        "filename": "cart.jpg"
+      },
+      {
+        "title": "Страница входа на сайт",
+        "filename": "login.jpg"
+      }
     ],
 		"text": "Сайт компании по производству мебели",
 		"feats": ["HTML", "CSS", "Bootstrap", "JS", "jQuery", "Bitrix"],
@@ -19,7 +31,24 @@
     "category": "Сайты",
     "link": "tartufo.renart.ru",
 		"path": "tartufo",
-		"pics": ["catalog.jpg", "product.jpg", "text.jpg", "main.jpg"],
+		"pics": [
+      {
+        "title": "Каталог",
+        "filename": "catalog.jpg"
+      },
+      {
+        "title": "Страница товара",
+        "filename": "product.jpg"
+      },
+      {
+        "title": "Текстовая страница",
+        "filename": "text.jpg"
+      },
+      {
+        "title": "Главная",
+        "filename": "main.jpg"
+      }
+    ],
 		"text": "Сайт компании по производству мебели",
 		"feats": ["HTML", "CSS", "Bootstrap", "JS", "jQuery", "Bitrix"],
 		"big": true
@@ -29,7 +58,12 @@
     "category": "Сайты",
     "link": "www.puremovers.com",
 		"path": "puremovers",
-		"pics": ["main.jpg"],
+		"pics": [
+      {
+        "title": "Главная",
+        "filename": "main.jpg"
+      }
+    ],
 		"text": "Сайт компании грузоперевозчика",
 		"feats": ["HTML", "CSS", "Bootstrap", "JS", "jQuery", "Bitrix"],
 		"big": false
