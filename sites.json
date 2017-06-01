@@ -62,11 +62,67 @@
       {
         "title": "Главная",
         "filename": "main.jpg"
-      }
+      },
+      {
+        "title": "Email-рассылка",
+        "filename": "email.jpg"
+      }      
     ],
 		"text": "Сайт компании грузоперевозчика (только версия для мобильных устройств)",
 		"feats": ["HTML", "CSS", "Bootstrap", "JS", "jQuery", "Bitrix"],
 		"big": false
+	},
+  {
+		"name": "AMR",
+    "category": "Email",
+		"path": "email-amr",
+		"pics": [
+      {
+        "filename": "email.jpg"
+      }
+    ],
+		"text": "Email-рассылка для компании AMR",
+		"feats": ["HTML", "CSS"],
+		"big": false
+	},
+  {
+		"name": "krutizna",
+    "category": "Email",
+		"path": "email-krutizna",
+    "link": "krutizna.ru",
+		"pics": [
+      {
+        "filename": "breakfast.jpg"
+      },
+      {
+        "filename": "conf-season.jpg"
+      },
+      {
+        "filename": "evenings.jpg"
+      },
+      {
+        "filename": "game.jpg"
+      },
+      {
+        "filename": "jordan.jpg"
+      },
+      {
+        "filename": "lipdub.jpg"
+      },
+      {
+        "filename": "maslenica.jpg"
+      },
+      {
+        "filename": "master-margo.jpg"
+      },
+      {
+        "filename": "time.jpg"
+      }
+      
+    ],
+		"text": "Email-рассылка для компании Академия Приключений",
+		"feats": ["HTML", "CSS"],
+		"big": true
 	}
 	
 ]

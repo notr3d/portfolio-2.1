@@ -138,6 +138,7 @@
       text-align: center;
     }
     img {
+      width: 100%;
       border: .5rem solid @grey;
     }
   }
@@ -149,7 +150,6 @@
     margin-bottom: 16px;
   }
   &__feats {
-    margin-bottom: 1rem;
     span {
       display: inline-block;
       background: @grey;
@@ -160,8 +160,12 @@
     }
   }
   &__link {
-    margin-top: auto;  
+    margin-top: 1rem;  
     text-align: center;
+    display: none;
+    &.active {
+      display: block;
+    }
     a {
       display: inline-block;
       color: @black;

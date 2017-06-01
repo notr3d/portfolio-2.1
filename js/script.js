@@ -115,7 +115,12 @@ var openModal = function(modalId){
 		if (site.path == modalId){
 			modalTitle.innerHTML = site.name;
 			modalText.innerHTML = site.text;
-      modalLink.setAttribute('href', 'http://' + site.link);
+      if (site.link){
+        modalLink.parentElement.classList.add('active');
+        modalLink.setAttribute('href', 'http://' + site.link);
+      } else {
+        modalLink.parentElement.classList.remove('active');
+      }
 			if (site.feats){				
 				for (let i = 0; i < site.feats.length; i++){
 					var feat = document.createElement('span');
@@ -147,9 +152,11 @@ var openModal = function(modalId){
 				for (let i = 0; i < site.pics.length; i++){
 					var pic = document.createElement('div');
 					pic.classList.add('modal__pic');
-					var picContent = 
-              '<h3>' + site.pics[i].title + '</h3>' +
-              '<img src="pics/' + site.path + '/' + site.pics[i].filename + '">';
+          var picContent = "";
+          if (site.pics[i].title){
+            picContent = '<h3>' + site.pics[i].title + '</h3>';
+          }
+          picContent += '<img src="pics/' + site.path + '/' + site.pics[i].filename + '">';
 					pic.insertAdjacentHTML('afterbegin', picContent);
 					modalPics.appendChild(pic);
 				}

@@ -347,6 +347,7 @@
   text-align: center;
 }
 .modal__pic img {
+  width: 100%;
   border: 0.5rem solid #eee;
 }
 .modal__title {
@@ -355,9 +356,6 @@
 }
 .modal__text {
   margin-bottom: 16px;
-}
-.modal__feats {
-  margin-bottom: 1rem;
 }
 .modal__feats span {
   display: inline-block;
@@ -368,8 +366,12 @@
   font-weight: bold;
 }
 .modal__link {
-  margin-top: auto;
+  margin-top: 1rem;
   text-align: center;
+  display: none;
+}
+.modal__link.active {
+  display: block;
 }
 .modal__link a {
   display: inline-block;
