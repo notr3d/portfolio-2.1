@@ -316,7 +316,7 @@ var fadeInInit = function(elArray){
     }
   }
 }
-fadeInInit(['.section-heading', '.sites__head', '.sites__item', '.fancy-table'])
+fadeInInit(['.section-heading', '.sites__head', '.sites__item', '.fancy-table', '.contacts__item'])
 var fadeInEls = document.querySelectorAll('.fade-in');
 
 
