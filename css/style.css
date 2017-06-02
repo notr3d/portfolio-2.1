@@ -112,7 +112,72 @@
 .site-footer {
   background: #333;
   color: #fff;
-  padding: 15px;
+  padding: 1rem;
+}
+.contacts {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .contacts {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+.contacts__item {
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .contacts__item:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .contacts__item {
+    margin-bottom: 0;
+    margin: 0 1rem;
+    flex-basis: 25%;
+  }
+}
+@media (min-width: 1280px) {
+  .contacts__item {
+    margin: 0 2rem;
+  }
+}
+.contacts__item--location .contacts__pic {
+  background-image: url(../images/pin.svg);
+}
+.contacts__item--email .contacts__pic {
+  background-image: url(../images/email.svg);
+}
+.contacts__item--tel .contacts__pic {
+  background-image: url(../images/tel.svg);
+}
+.contacts__pic {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: .25rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.contacts__text {
+  font-size: 1.5rem;
+  color: #fff;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.contacts__text a {
+  color: #333;
+  color: #fff;
+}
+.contacts__text a::before {
+  background-color: #333;
 }
 /*
 .site-aside {
@@ -641,17 +706,7 @@ img {
 }
 @media (min-width: 1280px) {
   .sites__item {
-    flex-basis: 25%;
-  }
-}
-@media (min-width: 768px) {
-  .sites__item--big {
-    flex-basis: 100%;
-  }
-}
-@media (min-width: 1280px) {
-  .sites__item--big {
-    flex-basis: 50%;
+    flex-basis: 33.333333%;
   }
 }
 .sites__item.hidden {
@@ -748,61 +803,4 @@ img {
 .faded-in {
   transform: none;
   opacity: 1;
-}
-.contacts {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  flex-direction: column;
-}
-@media (min-width: 768px) {
-  .contacts {
-    flex-direction: row;
-    justify-content: center;
-  }
-}
-.contacts__item {
-  margin-bottom: 2rem;
-  text-align: center;
-}
-@media (min-width: 768px) {
-  .contacts__item {
-    margin-bottom: 0;
-    margin: 0 1rem;
-    flex-basis: 25%;
-  }
-}
-@media (min-width: 1280px) {
-  .contacts__item {
-    margin: 0 2rem;
-  }
-}
-.contacts__item--location .contacts__pic {
-  background-image: url(../images/pin.svg);
-}
-.contacts__item--email .contacts__pic {
-  background-image: url(../images/email.svg);
-}
-.contacts__item--tel .contacts__pic {
-  background-image: url(../images/tel.svg);
-}
-.contacts__pic {
-  display: inline-block;
-  width: 3rem;
-  height: 3rem;
-  margin-bottom: .5rem;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.contacts__text {
-  font-size: 2rem;
-  font-family: 'Open Sans Condensed', sans-serif;
-}
-.contacts__text a {
-  color: #333;
-}
-.contacts__text a::before {
-  background-color: #333;
 }

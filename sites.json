@@ -123,6 +123,30 @@
 		"text": "Email-рассылка для компании Академия Приключений",
 		"feats": ["HTML", "CSS"],
 		"big": true
+	},
+  {
+		"name": "Pink",
+    "category": "Верстка",
+		"path": "pink",
+    "link": "notr3d.github.io/79358-pink",
+		"pics": [
+      {
+        "title": "Главная",
+        "filename": "main.JPG"
+      },
+      {
+        "title": "Блог",
+        "filename": "blog.JPG"
+      },
+      {
+        "title": "Форма",
+        "filename": "form.JPG"
+      }
+      
+    ],
+		"text": "Небольшой сайт веб-приложения",
+		"feats": ["HTML", "CSS", "JS"],
+		"big": false
 	}
 	
 ]

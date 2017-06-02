@@ -29,9 +29,10 @@ var sitesContainer = document.querySelector('#sites');
 
 var siteCategories = ['Все'];
 
-sitesJSON.forEach(function(site){
+sitesJSON.forEach(function(site){  
 	var sitesItem = document.createElement('div');
 	sitesItem.classList.add('sites__item');
+  sitesItem.style.order = Math.floor(Math.random() * sitesJSON.length)
 	sitesItem.setAttribute('data-cat', site.category);
 	var sitesItemTemplate = 
 		'<div data-modal="' + site.path + '" data-tooltip="' + site.name + ' " class="sites__inner">' +
@@ -41,9 +42,9 @@ sitesJSON.forEach(function(site){
 			'<div class="sites__title">' + site.name + '</div>' +
 		'</div>';
 	sitesItem.insertAdjacentHTML('afterbegin', sitesItemTemplate);	;
-	if (site.hasOwnProperty('big') && site.big == true){
-		sitesItem.classList.add('sites__item--big')
-	};	
+//	if (site.hasOwnProperty('big') && site.big == true){
+//		sitesItem.classList.add('sites__item--big')
+//	};	
 	
 	sitesContainer.appendChild(sitesItem);	
 	
@@ -348,11 +349,16 @@ document.addEventListener('scroll', function(){
 	};  
   
 	for (let i = 0; i <= contentSectionTopCoords.length; i++){
-		if (pageYOffset + siteNav.offsetHeight > contentSectionTopCoords[contentSectionTopCoords.length - i]){
+    if (pageYOffset + window.innerHeight == document.body.scrollHeight){
+      for (let i = 0; i < siteNavButtons.length; i++){
+				siteNavButtons[i].classList.remove('active');
+			}
+      siteNavButtons[siteNavButtons.length - 1].classList.add('active');
+    } else if (pageYOffset + siteNav.offsetHeight > contentSectionTopCoords[contentSectionTopCoords.length - i]){
 			for (let i = 0; i < siteNavButtons.length; i++){
 				siteNavButtons[i].classList.remove('active')
 			}
-			siteNavButtons[contentSectionTopCoords.length - i].classList.add('active');		
+			siteNavButtons[contentSectionTopCoords.length - i].classList.add('active');	
 			return;
 		} else {
       for (let i = 0; i < siteNavButtons.length; i++){
