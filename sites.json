@@ -65,7 +65,7 @@
       },
       {
         "title": "Email-рассылка",
-        "filename": "email.JPG"
+        "filename": "email.jpg"
       }      
     ],
 		"text": "Сайт компании грузоперевозчика (только версия для мобильных устройств)",
@@ -78,7 +78,7 @@
 		"path": "email-amr",
 		"pics": [
       {
-        "filename": "email.JPG"
+        "filename": "email.jpg"
       }
     ],
 		"text": "Email-рассылка для компании AMR",
@@ -132,15 +132,15 @@
 		"pics": [
       {
         "title": "Главная",
-        "filename": "main.JPG"
+        "filename": "main.jpg"
       },
       {
         "title": "Блог",
-        "filename": "blog.JPG"
+        "filename": "blog.jpg"
       },
       {
         "title": "Форма",
-        "filename": "form.JPG"
+        "filename": "form.jpg"
       }
       
     ],
@@ -156,15 +156,15 @@
 		"pics": [
       {
         "title": "Главная",
-        "filename": "main.JPG"
+        "filename": "main.jpg"
       },
       {
         "title": "Блог",
-        "filename": "blog.JPG"
+        "filename": "blog.jpg"
       },
       {
         "title": "Форма",
-        "filename": "form.JPG"
+        "filename": "form.jpg"
       }
       
     ],
@@ -179,7 +179,7 @@
     "link": "notr3d.github.io/cube",
 		"pics": [
       {
-        "filename": "main.JPG"
+        "filename": "main.jpg"
       }
       
     ],
@@ -195,15 +195,15 @@
 		"pics": [
       {
         "title": "Главная",
-        "filename": "main.JPG"
+        "filename": "main.jpg"
       },
       {
         "title": "Каталог",
-        "filename": "catalog.JPG"
+        "filename": "catalog.jpg"
       },
       {
         "title": "Продукт",
-        "filename": "product.JPG"
+        "filename": "product.jpg"
       }
       
     ],
@@ -219,11 +219,11 @@
 		"pics": [
       {
         "title": "Главная",
-        "filename": "main.JPG"
+        "filename": "main.jpg"
       },
       {
         "title": "Каталог",
-        "filename": "catalog.JPG"
+        "filename": "catalog.jpg"
       }
       
     ],
@@ -239,23 +239,23 @@
 		"pics": [
       {
         "title": "Главная",
-        "filename": "main.JPG"
+        "filename": "main.jpg"
       },
       {
         "title": "Конструктор зданий, шаг 1",
-        "filename": "step-1.JPG"
+        "filename": "step-1.jpg"
       },
       {
         "title": "Конструктор зданий, шаг 2",
-        "filename": "step-2.JPG"
+        "filename": "step-2.jpg"
       },
       {
         "title": "Конструктор зданий, шаг 3",
-        "filename": "step-3.JPG"
+        "filename": "step-3.jpg"
       },
       {
         "title": "Конструктор зданий, шаг 4",
-        "filename": "step-4.JPG"
+        "filename": "step-4.jpg"
       }
       
     ],
@@ -271,27 +271,27 @@
 		"pics": [
       {
         "title": "Главная",
-        "filename": "main.JPG"
+        "filename": "main.jpg"
       },
       {
         "title": "Услуги",
-        "filename": "services.JPG"
+        "filename": "services.jpg"
       },
       {
         "title": "Цены",
-        "filename": "prices.JPG"
+        "filename": "prices.jpg"
       },
       {
         "title": "Проекты",
-        "filename": "projects.JPG"
+        "filename": "projects.jpg"
       },
       {
         "title": "Вопросы и ответы",
-        "filename": "faq.JPG"
+        "filename": "faq.jpg"
       },
       {
         "title": "Контакты",
-        "filename": "contacts.JPG"
+        "filename": "contacts.jpg"
       }
       
     ],
@@ -306,7 +306,7 @@
     "link": "old.novform.ru",
 		"pics": [
       {
-        "filename": "main.JPG"
+        "filename": "main.jpg"
       }
       
     ],
@@ -321,19 +321,19 @@
 		"pics": [
       {
         "title": "Главная",
-        "filename": "main.JPG"
+        "filename": "main.jpg"
       },
       {
         "title": "О компании",
-        "filename": "about.JPG"
+        "filename": "about.jpg"
       },
       {
         "title": "Продукция",
-        "filename": "products.JPG"
+        "filename": "products.jpg"
       },
       {
         "title": "Страница товара",
-        "filename": "product.JPG"
+        "filename": "product.jpg"
       }
       
     ],
@@ -347,7 +347,7 @@
 		"path": "folio",
 		"pics": [
       {
-        "filename": "main.JPG"
+        "filename": "main.jpg"
       }
       
     ],
@@ -363,19 +363,19 @@
 		"pics": [
       {
         "title": "Главная",
-        "filename": "main.JPG"
+        "filename": "main.jpg"
       },
       {
         "title": "Клиенты",
-        "filename": "clients.JPG"
+        "filename": "clients.jpg"
       },
       {
         "title": "Отзывы",
-        "filename": "reviews.JPG"
+        "filename": "reviews.jpg"
       },
       {
         "title": "Услуги",
-        "filename": "services.JPG"
+        "filename": "services.jpg"
       }
       
     ],
@@ -390,15 +390,15 @@
 		"pics": [
       {
         "title": "Главная",
-        "filename": "main.JPG"
+        "filename": "main.jpg"
       },
       {
         "title": "Каталог услуг",
-        "filename": "catalog.JPG"
+        "filename": "catalog.jpg"
       },
       {
         "title": "Цены",
-        "filename": "prices.JPG"
+        "filename": "prices.jpg"
       }
       
     ],
