@@ -345,6 +345,7 @@
 		"name": "Folio",
     "category": "Верстка",
 		"path": "folio",
+    "link": "notr3d.github.io/folio",
 		"pics": [
       {
         "filename": "main.jpg"
