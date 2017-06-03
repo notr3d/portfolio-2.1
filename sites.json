@@ -145,8 +145,266 @@
       
     ],
 		"text": "Небольшой сайт веб-приложения",
-		"feats": ["HTML", "CSS", "JS"],
+		"feats": ["HTML", "CSS", "LESS", "JS"],
+		"big": false
+	},
+	{
+		"name": "Sedona",
+    "category": "Верстка",
+		"path": "sedona",
+    "link": "notr3d.github.io/sedona",
+		"pics": [
+      {
+        "title": "Главная",
+        "filename": "main.JPG"
+      },
+      {
+        "title": "Блог",
+        "filename": "blog.JPG"
+      },
+      {
+        "title": "Форма",
+        "filename": "form.JPG"
+      }
+      
+    ],
+		"text": "Сайт-визитка",
+		"feats": ["HTML", "CSS", "LESS", "JS"],
+		"big": false
+	},
+  {
+		"name": "Cube",
+    "category": "Верстка",
+		"path": "cube",
+    "link": "notr3d.github.io/cube",
+		"pics": [
+      {
+        "filename": "main.JPG"
+      }
+      
+    ],
+		"text": "Одностраничный сайт веб-студии",
+		"feats": ["HTML", "CSS", "LESS"],
+		"big": false
+	},
+  {
+		"name": "Fanatec",
+    "category": "Верстка",
+		"path": "funatec",
+    "link": "notr3d.github.io/funatec",
+		"pics": [
+      {
+        "title": "Главная",
+        "filename": "main.JPG"
+      },
+      {
+        "title": "Каталог",
+        "filename": "catalog.JPG"
+      },
+      {
+        "title": "Продукт",
+        "filename": "product.JPG"
+      }
+      
+    ],
+		"text": "Сайт компании по производству игровых гаджетов",
+		"feats": ["HTML", "CSS"],
+		"big": false
+	},
+  {
+		"name": "Steel",
+    "category": "Сайты",
+		"path": "steel",
+    "link": "mtllk.ru",
+		"pics": [
+      {
+        "title": "Главная",
+        "filename": "main.JPG"
+      },
+      {
+        "title": "Каталог",
+        "filename": "catalog.JPG"
+      }
+      
+    ],
+		"text": "Сайт компании по производству ЛЭП",
+		"feats": ["HTML", "CSS", "LESS", "jQuery", "WordPress"],
+		"big": false
+	},
+  {
+		"name": "BigKD",
+    "category": "Сайты",
+		"path": "bigkd-old",
+    "link": "old.bigkd.ru",
+		"pics": [
+      {
+        "title": "Главная",
+        "filename": "main.JPG"
+      },
+      {
+        "title": "Конструктор зданий, шаг 1",
+        "filename": "step-1.JPG"
+      },
+      {
+        "title": "Конструктор зданий, шаг 2",
+        "filename": "step-2.JPG"
+      },
+      {
+        "title": "Конструктор зданий, шаг 3",
+        "filename": "step-3.JPG"
+      },
+      {
+        "title": "Конструктор зданий, шаг 4",
+        "filename": "step-4.JPG"
+      }
+      
+    ],
+		"text": "Сайт компании по проектировке зданий",
+		"feats": ["HTML", "CSS", "LESS", "jQuery", "WordPress"],
+		"big": false
+	},
+  {
+		"name": "Big Constraction",
+    "category": "Сайты",
+		"path": "bigkd",
+    "link": "bigkd.ru",
+		"pics": [
+      {
+        "title": "Главная",
+        "filename": "main.JPG"
+      },
+      {
+        "title": "Услуги",
+        "filename": "services.JPG"
+      },
+      {
+        "title": "Цены",
+        "filename": "prices.JPG"
+      },
+      {
+        "title": "Проекты",
+        "filename": "projects.JPG"
+      },
+      {
+        "title": "Вопросы и ответы",
+        "filename": "faq.JPG"
+      },
+      {
+        "title": "Контакты",
+        "filename": "contacts.JPG"
+      }
+      
+    ],
+		"text": "Сайт компании по проектировке зданий и металлоконструкций",
+		"feats": ["HTML", "CSS", "LESS", "jQuery", "WordPress"],
+		"big": false
+	},
+  {
+		"name": "Novform",
+    "category": "Сайты",
+		"path": "novform-old",
+    "link": "old.novform.ru",
+		"pics": [
+      {
+        "filename": "main.JPG"
+      }
+      
+    ],
+		"text": "Одностраничный сайт компании по производству сэндвич-панелей",
+		"feats": ["HTML", "CSS", "LESS", "jQuery", "WordPress"],
+		"big": false
+	},
+  {
+		"name": "Novform 2",
+    "category": "Сайты",
+		"path": "novform",
+		"pics": [
+      {
+        "title": "Главная",
+        "filename": "main.JPG"
+      },
+      {
+        "title": "О компании",
+        "filename": "about.JPG"
+      },
+      {
+        "title": "Продукция",
+        "filename": "products.JPG"
+      },
+      {
+        "title": "Страница товара",
+        "filename": "product.JPG"
+      }
+      
+    ],
+		"text": "Cайт компании по производству сэндвич-панелей",
+		"feats": ["HTML", "CSS", "LESS", "jQuery", "WordPress"],
+		"big": false
+	},
+  {
+		"name": "Folio",
+    "category": "Верстка",
+		"path": "folio",
+		"pics": [
+      {
+        "filename": "main.JPG"
+      }
+      
+    ],
+    "text": "Cайт-портфолио фотографа",
+		"feats": ["HTML", "CSS", "LESS"],
+		"big": false
+	},
+  {
+		"name": "Chop",
+    "category": "Сайты",
+		"path": "chop-old",
+    "link": "old.regionchop.ru",
+		"pics": [
+      {
+        "title": "Главная",
+        "filename": "main.JPG"
+      },
+      {
+        "title": "Клиенты",
+        "filename": "clients.JPG"
+      },
+      {
+        "title": "Отзывы",
+        "filename": "reviews.JPG"
+      },
+      {
+        "title": "Услуги",
+        "filename": "services.JPG"
+      }
+      
+    ],
+    "text": "Cайт ЧОПа",
+		"feats": ["HTML", "CSS", "LESS", "jQuery", "WordPress"],
+		"big": false
+	},
+  {
+		"name": "Chop 2",
+    "category": "Сайты",
+		"path": "chop",
+		"pics": [
+      {
+        "title": "Главная",
+        "filename": "main.JPG"
+      },
+      {
+        "title": "Каталог услуг",
+        "filename": "catalog.JPG"
+      },
+      {
+        "title": "Цены",
+        "filename": "prices.JPG"
+      }
+      
+    ],
+    "text": "Вторая версия сайта ЧОПа",
+		"feats": ["HTML", "CSS", "LESS", "jQuery", "WordPress"],
 		"big": false
 	}
-	
+  
 ]

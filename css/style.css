@@ -643,6 +643,7 @@ img {
   margin: 0;
 }
 .section-heading__subtitle {
+  display: none;
   margin-top: 1rem;
 }
 .sites__head {
@@ -696,7 +697,6 @@ img {
   height: 300px;
   flex-basis: 100%;
   padding: 8px;
-  transition: .5s;
   max-height: 1000px;
 }
 @media (min-width: 768px) {
@@ -710,17 +710,7 @@ img {
   }
 }
 .sites__item.hidden {
-  padding: 0;
-}
-@media (max-width: 767px) {
-  .sites__item.hidden {
-    max-height: 0;
-  }
-}
-@media (min-width: 768px) {
-  .sites__item.hidden {
-    flex-basis: 0;
-  }
+  display: none;
 }
 .sites__inner {
   height: 100%;
@@ -786,7 +776,7 @@ img {
 }
 .fade-in {
   opacity: 0;
-  transition: .3s;
+  transition: transform .3s;
 }
 .fade-in--top {
   transform: translateY(-150px) scale(0.25);

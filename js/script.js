@@ -82,6 +82,9 @@ for (let i = 0; i < siteCategoriesContainer.children.length; i++){
 		};
 		this.classList.add('active');		
 		filterSites(this.id);
+    for (let i = 0; i < sitesContainer.children.length; i++){
+      sitesContainer.children[i].classList.add('faded-in');
+    }
 	})
 }
 
@@ -314,7 +317,7 @@ for (let i = 0; i < contentSections.length; i++){
 	contentSectionTopCoords.push(contentSections[i].offsetTop)
 };
 
-var fadeInClasses = ['fade-in--top', 'fade-in--bottom', 'fade-in--left'];
+var fadeInClasses = ['fade-in--top', 'fade-in--left'];
 var fadeInInit = function(elArray){
   for (let i = 0; i < elArray.length; i++){
     var el = document.querySelectorAll(elArray[i]);
@@ -324,7 +327,7 @@ var fadeInInit = function(elArray){
     }
   }
 }
-fadeInInit(['.section-heading', '.sites__head', '.sites__item', '.fancy-table', '.contacts__item'])
+fadeInInit(['.section-heading', '.sites__head', '.sites__item', '.fancy-table', '.contacts'])
 var fadeInEls = document.querySelectorAll('.fade-in');
 
 
