@@ -77,8 +77,6 @@ var siteCatsBGMove = function(btn){
   siteCategoriesBG.style.top = btn.offsetTop;
 }
 
-siteCatsBGMove(siteCategoriesContainer.firstElementChild);
-
 //site filter 
 var filterSites = function(catId){	
 	for (let i = 0; i < sitesContainer.children.length; i++){

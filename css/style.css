@@ -684,6 +684,7 @@ img {
 .sites__head button.active {
   cursor: default;
   color: #fff;
+  background: #333;
   /*&::before {
 					width: 100%;
 				}*/
