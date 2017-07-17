@@ -64,6 +64,21 @@ for (let i = 0; i < siteCategories.length; i++){
 };
 siteCategoriesContainer.firstElementChild.classList.add('active');
 
+//site cats fancy effect init
+var siteCategoriesBG = document.createElement('span');
+siteCategoriesBG.classList.add('sites__bg');
+siteCategoriesContainer.appendChild(siteCategoriesBG);
+
+//site cats fancy effect 
+var siteCatsBGMove = function(btn){
+  siteCategoriesBG.style.width = btn.offsetWidth;
+  siteCategoriesBG.style.height = btn.offsetHeight;
+  siteCategoriesBG.style.left = btn.offsetLeft;
+  siteCategoriesBG.style.top = btn.offsetTop;
+}
+
+siteCatsBGMove(siteCategoriesContainer.firstElementChild);
+
 //site filter 
 var filterSites = function(catId){	
 	for (let i = 0; i < sitesContainer.children.length; i++){
@@ -82,6 +97,7 @@ for (let i = 0; i < siteCategoriesContainer.children.length; i++){
 		};
 		this.classList.add('active');		
 		filterSites(this.id);
+    siteCatsBGMove(this);
     for (let i = 0; i < sitesContainer.children.length; i++){
       sitesContainer.children[i].classList.add('faded-in');
     }

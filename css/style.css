@@ -649,6 +649,7 @@ img {
 .sites__head {
   text-align: center;
   padding: 8px;
+  position: relative;
 }
 .sites__head button {
   background: none;
@@ -658,28 +659,40 @@ img {
   font-size: 1.5rem;
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: bold;
-  position: relative;
-  padding: .25rem 0;
-}
-.sites__head button::before {
-  content: '';
-  display: inline-block;
-  width: 0;
-  height: 5px;
-  background: #333;
-  position: absolute;
-  top: 100%;
-  left: 0;
+  padding: .25rem .5rem;
   transition: .3s;
+  position: relative;
+  z-index: 1;
+  outline: none;
+  /*&::before {
+				content: '';
+				display: inline-block;
+				width: 0;
+				height: 5px;
+				background: @black;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				transition: .3s;
+			}*/
 }
-.sites__head button:hover::before {
-  width: 100%;
+.sites__head button:hover {
+  /*&::before {
+					width: 100%;
+				}*/
 }
 .sites__head button.active {
   cursor: default;
+  color: #fff;
+  /*&::before {
+					width: 100%;
+				}*/
 }
-.sites__head button.active::before {
-  width: 100%;
+.sites__bg {
+  position: absolute;
+  display: inline-block;
+  background: #333;
+  transition: .3s;
 }
 .sites__category {
   margin: 8px;

@@ -219,6 +219,7 @@ img {
 	&__head {
 		text-align: center;
 		padding: 8px;
+    position: relative;
 		button {
 			background: none;
 			border: none;
@@ -228,8 +229,13 @@ img {
 			.header();
       font-weight: bold;
 			position: relative;
-			padding: .25rem 0;
-			&::before {
+			//padding: .25rem 0;
+			padding: .25rem .5rem;
+      transition: .3s;
+      position: relative;
+      z-index: 1;
+      outline: none;
+			/*&::before {
 				content: '';
 				display: inline-block;
 				width: 0;
@@ -239,20 +245,31 @@ img {
 				top: 100%;
 				left: 0;
 				transition: .3s;
-			}
+			}*/
 			&:hover {
-				&::before {
+				/*&::before {
 					width: 100%;
-				}
+				}*/
 			}
 			&.active {
 				cursor: default;
-				&::before {
+        color: @white;
+				/*&::before {
 					width: 100%;
-				}
+				}*/
 			}
 		}
 	}
+  &__bg {
+    position: absolute;
+    //left: 0;
+    //top: 0;
+    display: inline-block;
+    //width: 100px;
+    //height: 50px;
+    background: @black;
+    transition: .3s;
+  }
 	&__category {
 		margin: 8px;
 	}
