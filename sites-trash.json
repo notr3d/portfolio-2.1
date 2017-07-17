@@ -1,0 +1,26 @@
+[  
+  {
+		"name": "Fanatec",
+    "category": "Верстка",
+		"path": "funatec",
+    "link": "notr3d.github.io/funatec",
+		"pics": [
+      {
+        "title": "Главная",
+        "filename": "main.jpg"
+      },
+      {
+        "title": "Каталог",
+        "filename": "catalog.jpg"
+      },
+      {
+        "title": "Продукт",
+        "filename": "product.jpg"
+      }
+      
+    ],
+		"text": "Сайт компании по производству игровых гаджетов",
+		"feats": ["HTML", "CSS"],
+		"big": false
+	}
+]

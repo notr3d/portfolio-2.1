@@ -188,30 +188,6 @@
 		"big": false
 	},
   {
-		"name": "Fanatec",
-    "category": "Верстка",
-		"path": "funatec",
-    "link": "notr3d.github.io/funatec",
-		"pics": [
-      {
-        "title": "Главная",
-        "filename": "main.jpg"
-      },
-      {
-        "title": "Каталог",
-        "filename": "catalog.jpg"
-      },
-      {
-        "title": "Продукт",
-        "filename": "product.jpg"
-      }
-      
-    ],
-		"text": "Сайт компании по производству игровых гаджетов",
-		"feats": ["HTML", "CSS"],
-		"big": false
-	},
-  {
 		"name": "Steel",
     "category": "Сайты",
 		"path": "steel",
@@ -406,6 +382,33 @@
     "text": "Вторая версия сайта ЧОПа",
 		"feats": ["HTML", "CSS", "LESS", "jQuery", "WordPress"],
 		"big": false
+	},
+  {
+		"name": "Evraz",
+    "category": "Верстка",
+		"path": "evraz",
+		"pics": [
+      {
+        "filename": "main.jpg"
+      }
+      
+    ],
+    "text": "Главная страница корпоративного портала",
+		"feats": ["HTML", "CSS", "LESS"]
+	},
+  {
+		"name": "Experium",
+    "category": "Верстка",
+		"path": "experium",
+		"pics": [
+      {
+        "filename": "main.jpg"
+      }
+      
+    ],
+    "text": "Главная страница корпоративного портала",
+		"feats": ["HTML", "CSS", "LESS", "jQuery"]
 	}
+  
   
 ]
